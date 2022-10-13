@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>TCworker • Posts by &#34;闲暇&#34; tag</title>
+        <link>http://example.com</link>
+        <description>time to work</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 12 Oct 2022 14:21:02 +0800</pubDate>
+        <lastBuildDate>Wed, 12 Oct 2022 14:21:02 +0800</lastBuildDate>
+        <category>csapp</category>
+        <category>闲暇</category>
+        <category>Linux</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/</guid>
+            <title>我的第一次博客</title>
+            <link>http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/</link>
+            <category>闲暇</category>
+            <pubDate>Wed, 12 Oct 2022 14:21:02 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;a&lt;/p&gt;
+&lt;p&gt;good&lt;/p&gt;
+&lt;p&gt;start&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/</guid>
+            <title>我的第一次博客</title>
+            <link>http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/</link>
+            <category>闲暇</category>
+            <pubDate>Wed, 12 Oct 2022 11:59:00 +0800</pubDate>
+            <description><![CDATA[ &lt;hr&gt;
+&lt;p&gt;我叫chen lin hai ，是TC company的worker，now ，let‘s begin to work.&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

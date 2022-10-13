@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "TCworker • All posts by \"自我\" category",
+    "description": "time to work",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/",
+            "url": "http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/",
+            "title": "我的第一次博客",
+            "date_published": "2022-10-12T06:21:02.000Z",
+            "content_html": "<p>a</p>\n<p>good</p>\n<p>start</p>\n",
+            "tags": [
+                "闲暇"
+            ]
+        },
+        {
+            "id": "http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/",
+            "url": "http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/",
+            "title": "我的第一次博客",
+            "date_published": "2022-10-12T03:59:00.000Z",
+            "content_html": "<hr>\n<p>我叫chen lin hai ，是TC company的worker，now ，let‘s begin to work.</p>\n",
+            "tags": [
+                "闲暇"
+            ]
+        }
+    ]
+}
