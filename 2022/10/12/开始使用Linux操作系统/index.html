@@ -1,0 +1,606 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="TCworker" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="TCworker" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="TCworker" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Linux" />
+
+
+<link rel="canonical" href="http://example.com/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+
+
+  <title>
+开始使用Linux操作系统 - 理论知识 |
+Yume Shoka = TCworker</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">开始使用Linux操作系统
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-12 19:07:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-12T19:07:29+08:00">2022-10-12</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" itemprop="item" rel="index" title="分类于 理论知识"><span itemprop="name">理论知识</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Me">
+    <meta itemprop="description" content=", time to work">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TCworker">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="开始使用linux操作系统"><a class="markdownIt-Anchor" href="#开始使用linux操作系统">#</a> 开始使用 Linux 操作系统</h1>
+<h2 id="2-1linux-目录结构与访问路径"><a class="markdownIt-Anchor" href="#2-1linux-目录结构与访问路径">#</a> 2-1；Linux 目录结构与访问路径</h2>
+<h3 id="目录的基本概念"><a class="markdownIt-Anchor" href="#目录的基本概念">#</a> 目录的基本概念</h3>
+<p>目录是描述文件夹的专有名词。</p>
+<p>在计算机代码中，<u>文件夹形式与书本目录相同</u>。</p>
+<ul>
+<li>书本目录记录所有书的章节名和页码。</li>
+<li>计算机目录记录其中包含的文件和对应的访问地址。</li>
+<li>相对于普通文件，目录也称为目录文件。</li>
+</ul>
+<h3 id="linux文件系统是树形结构"><a class="markdownIt-Anchor" href="#linux文件系统是树形结构">#</a> Linux 文件系统是树形结构</h3>
+<p>优点</p>
+<ul>
+<li><strong>层次结构鲜明</strong></li>
+<li><strong>易于扩展分支</strong></li>
+<li><strong>分支隔离互不依赖</strong></li>
+</ul>
+<p>Windows 系统每个盘符作为文件根节点（C 盘。D 盘）</p>
+<p>Linux 系统采用单根结构，整个文件系统只有一个根。</p>
+<h3 id="linux的根目录下有众多的二级目录如"><a class="markdownIt-Anchor" href="#linux的根目录下有众多的二级目录如">#</a> Linux 的根目录（/）下有众多的二级目录，如</h3>
+<ul>
+<li>（/boot，存放 Linux 启动所需的内核文件和镜像文件）</li>
+<li>(/bin, 存放最常用的命令)</li>
+<li>（/dev，存放 Linux 的外部设备，且在 Linux 中访问设备的方式和访问文件相同）</li>
+<li>（/etc，存放所有系统管理所需要的配置文件和子目录）</li>
+<li>（/home，用户的主目录，属于用户）</li>
+<li>（/root，此目录为系统管理员，也称作超级管理员 root 用户的主目录）</li>
+</ul>
+<h3 id="访问路径"><a class="markdownIt-Anchor" href="#访问路径">#</a> 访问路径</h3>
+<p><strong>绝对路径</strong>（文件或目录相对于根目录的可访问路径）</p>
+<p>形式特点：</p>
+<ol>
+<li>Windows：从盘符开始书写的路径。如：C：\Linux</li>
+<li>Linux：从根目录（/）开始书写的路径。如：/home</li>
+</ol>
+<p>优缺：</p>
+<ul>
+<li>
+<p>具有<u>唯一性</u>，但是只能在<u>特定的操作系统环境</u>下才能准确定位目标路径。</p>
+</li>
+<li>
+<p><u>不适合编写脚本</u>。</p>
+</li>
+</ul>
+<p><strong>相对路径</strong>（文件或目录相对于当前目录的可访问路径）</p>
+<p>形式特点：</p>
+<p>1. 不是从根目录（/）开始书写的路径。如：etc。</p>
+<p>2. 一般从当前目录开始书写</p>
+<p>tips：</p>
+<p>用 “.” 表示本级目录；用 “…” 表示上级目录。</p>
+<p>优缺：</p>
+<ul>
+<li>同一个参考体系内，<u>相对路径不变</u>，适合编写脚本。</li>
+<li>计算较为<strong>复杂</strong>，需要掌握文件系统的目录结构。</li>
+</ul>
+<p>（归结而言一个是从根目录出发，一个是从其他的目录出发，但无论从什么地方出发，目的地是一样的，不过过程不同）</p>
+<h2 id="2-2定位和切换目录"><a class="markdownIt-Anchor" href="#2-2定位和切换目录">#</a> 2-2 定位和切换目录</h2>
+<h3 id="定位当前目录确定当前工作目录的绝对路径"><a class="markdownIt-Anchor" href="#定位当前目录确定当前工作目录的绝对路径">#</a> 定位当前目录（确定当前工作目录的绝对路径）</h3>
+<p><strong>命令</strong>：pwd（打印当前工作目录）</p>
+<p><strong>输出</strong>：当前所在工作目录的绝对路径</p>
+<p>（可用于相对路径的参考点）</p>
+<h3 id="切换工作目录前往新的工作目录"><a class="markdownIt-Anchor" href="#切换工作目录前往新的工作目录">#</a> 切换工作目录（前往新的工作目录）</h3>
+<p><strong>命令</strong>：cd（cd+【空格】+ 目标的绝对路径或相对路径）</p>
+<p>tips：</p>
+<p>{./}  表示当前目录</p>
+<p>{…/} 上一级目录</p>
+<p>单走 {cd} 直接切换至用户家目录</p>
+<p>{cd + 空格 + 横线} 切换到上一个工作目录（上一次工作的目录）</p>
+<p>{cd + 空格 + 波浪线} 切换到用户家目录</p>
+<h2 id="2-3查看目录内容"><a class="markdownIt-Anchor" href="#2-3查看目录内容">#</a> 2-3 查看目录内容</h2>
+<h3 id="ulinux命令基本范式u"><a class="markdownIt-Anchor" href="#ulinux命令基本范式u">#</a> <u><strong>Linux 命令基本范式</strong></u></h3>
+<p>含（命令关键词，命令选项，命令参数）</p>
+<p><strong>范式</strong>：<strong>命令关键字   选项     命令参数</strong></p>
+<p>其中：</p>
+<p><strong>命令关键字</strong>：必不可少，指明要完成的具体操作</p>
+<p><strong>选项</strong>：可选，指定用什么方式来完成操作，一般有默认值。</p>
+<p><strong>命令参数</strong>：可选，指明操作对象</p>
+<h3 id="查看目录内容"><a class="markdownIt-Anchor" href="#查看目录内容">#</a> 查看目录内容</h3>
+<p>含（查看指定目标内容，按指定格式查看目录内容，按指定格式查看指定目录内容）</p>
+<p><strong>命令</strong>：ls  【选项】 【目录路径】（分别对应 ，命令关键字，选项，命令参数）</p>
+<p><strong>其中选项</strong>：                                <u>注：（可以有多个选项内容，如：ls -l -a /  ； ls -al /）</u></p>
+<ul>
+<li>
+<p>l：长格式显示目录内容</p>
+</li>
+<li>
+<p>a：显示目录所有内容，包括隐藏文件</p>
+</li>
+<li>
+<p>无选项：仅显示非隐藏文件的名称</p>
+</li>
+</ul>
+<p><strong>其中目录路径</strong>：</p>
+<ul>
+<li>可以是绝对路径，也可为相对路径</li>
+<li>无参数：默认显示当前目录下的内容</li>
+</ul>
+<p>tips：</p>
+<p ls+空格+-l+空格+="">{ll + 空格 +/}=</p>
+<p>ll    -d    /dev（查看 dev 目录的相关信息）</p>
+<p>ll     /dev（查看 dev 目录的内容）（注意空格）</p>
+<p>{ls + 空格 ±±+help}     查看命令的使用格式与方法。</p>
+<p>ll   查看当前目录内容</p>
+<h2 id="2-4创建目录和文件"><a class="markdownIt-Anchor" href="#2-4创建目录和文件">#</a> 2-4 创建目录和文件</h2>
+<h3 id="u新建目录u含在指定位置新建目录在指定路径上新建所有目录同时新建多个目录"><a class="markdownIt-Anchor" href="#u新建目录u含在指定位置新建目录在指定路径上新建所有目录同时新建多个目录">#</a> <u><strong>新建目录</strong></u>，含 (在指定位置新建目录，在指定路径上新建所有目录，同时新建多个目录)</h3>
+<p><strong>命令</strong>：mkdir  【选项】  【目录路径】</p>
+<p><strong>其中目录路径</strong>：</p>
+<ul>
+<li>可以是绝对路径，也可以为相对路径</li>
+<li>可以是多个参数，表示一次性创建多个目录</li>
+</ul>
+<p><strong>其中选项</strong>：</p>
+<ul>
+<li>p：若指定的路径上有不存在目录，一并创建‘</li>
+<li>无选项：仅创建指定路径上最后一个目标目录</li>
+</ul>
+<p>tips：</p>
+<p>mkdir   目录 1  ；表示新建目录 1</p>
+<p>mkdir    -p    目录 2 / 目录 3（此时会先在当前目录下创建目录 2，再在目录 2 下创建目录 3，，如果不使用 - p，则无法执行命令）</p>
+<h3 id="新建文件含touch命令echo命令输出重定向"><a class="markdownIt-Anchor" href="#新建文件含touch命令echo命令输出重定向">#</a> 新建文件，含 (touch 命令，echo 命令输出重定向)</h3>
+<p><u>法 1：touch  【文件路径】</u></p>
+<p><strong>其中文件路径</strong>：</p>
+<ul>
+<li>可以是相对路径也可以是绝对路径</li>
+<li>可以是多个参数，表示一次性创建多个文件</li>
+</ul>
+<p><u>法 2：vi   【文件路径】</u></p>
+<p><strong>其中文件路径</strong>：</p>
+<ul>
+<li>可以是绝对路径，也可以是相对路径</li>
+<li>可以是已经存在的文件（可以该编辑文件）</li>
+<li>也可以是还未创建的文件（新建并编辑该文件）</li>
+</ul>
+<p><u>法 3：echo   内容信息     &gt;|&gt;&gt;    【文件路径】</u></p>
+<p><strong>输出重定向符</strong>：</p>
+<ul>
+<li>{&gt;}: 将命令的结果输出从显示器改到文件（覆盖）</li>
+<li>{&gt;&gt;}：将命令的结果输出从显示器改到文件（追加）</li>
+</ul>
+<p><strong>其中文件路径</strong>：</p>
+<ul>
+<li>可以是绝对路径，也可以是相对路径‘</li>
+<li>可以是已经存在的文件（编辑文件）</li>
+</ul>
+<p>tips：</p>
+<p>touch     文件 1   | 创建一个文件</p>
+<p>touch     文件 2     | 文件 3    ；创建多个文件</p>
+<p>vi     文件 1    |（因为已经存在，所以编辑文件）（会进入 vi 编辑器中，i 键 进入插入模式  ，Esc 键退回 vi 命令模式，输入   ：  符  ，进入 vi 底行模式 ，输入 wq 保存文件）</p>
+<p>cat   文件 1  | 查看文件内容</p>
+<p>cat    文件 4  | 文件不存在，则先创建再编辑</p>
+<p>echo “这是文件 5”      &gt;     文件 5</p>
+<p>echo “2002  3 2”   &gt;&gt;     文件 1（表示追加输入）</p>
+
+      <div class="tags">
+          <a href="/tags/Linux/" rel="tag"><i class="ic i-tag"></i> Linux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-10-12 19:21:01" itemprop="dateModified" datetime="2022-10-12T19:21:01+08:00">2022-10-12</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Me 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Me 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Me 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Me <i class="ic i-at"><em>@</em></i>TCworker
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="开始使用Linux操作系统">http://example.com/2022/10/12/开始使用Linux操作系统/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesx5fdwj20zk0m81kx.jpg" title="我的第一次博客">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 自我</span>
+  <h3>我的第一次博客</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="csapp第二章">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 理论知识</span>
+  <h3>csapp第二章</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text"> 开始使用 Linux 操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1linux-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E4%B8%8E%E8%AE%BF%E9%97%AE%E8%B7%AF%E5%BE%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 2-1；Linux 目录结构与访问路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 目录的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%98%AF%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.2.</span> <span class="toc-text"> Linux 文件系统是树形结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%9C%89%E4%BC%97%E5%A4%9A%E7%9A%84%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95%E5%A6%82"><span class="toc-number">1.1.3.</span> <span class="toc-text"> Linux 的根目录（&#x2F;）下有众多的二级目录，如</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E8%B7%AF%E5%BE%84"><span class="toc-number">1.1.4.</span> <span class="toc-text"> 访问路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E5%AE%9A%E4%BD%8D%E5%92%8C%E5%88%87%E6%8D%A2%E7%9B%AE%E5%BD%95"><span class="toc-number">1.2.</span> <span class="toc-text"> 2-2 定位和切换目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E7%A1%AE%E5%AE%9A%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 定位当前目录（确定当前工作目录的绝对路径）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E5%89%8D%E5%BE%80%E6%96%B0%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 切换工作目录（前往新的工作目录）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text"> 2-3 查看目录内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ulinux%E5%91%BD%E4%BB%A4%E5%9F%BA%E6%9C%AC%E8%8C%83%E5%BC%8Fu"><span class="toc-number">1.3.1.</span> <span class="toc-text"> Linux 命令基本范式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 查看目录内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6"><span class="toc-number">1.4.</span> <span class="toc-text"> 2-4 创建目录和文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u%E6%96%B0%E5%BB%BA%E7%9B%AE%E5%BD%95u%E5%90%AB%E5%9C%A8%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%96%B0%E5%BB%BA%E7%9B%AE%E5%BD%95%E5%9C%A8%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E4%B8%8A%E6%96%B0%E5%BB%BA%E6%89%80%E6%9C%89%E7%9B%AE%E5%BD%95%E5%90%8C%E6%97%B6%E6%96%B0%E5%BB%BA%E5%A4%9A%E4%B8%AA%E7%9B%AE%E5%BD%95"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 新建目录，含 (在指定位置新建目录，在指定路径上新建所有目录，同时新建多个目录)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%90%ABtouch%E5%91%BD%E4%BB%A4echo%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">1.4.2.</span> <span class="toc-text"> 新建文件，含 (touch 命令，echo 命令输出重定向)</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="开始使用Linux操作系统">开始使用Linux操作系统</a></li><li><a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" rel="bookmark" title="csapp第二章">csapp第二章</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Me"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Me</p>
+  <div class="description" itemprop="description">time to work</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">3</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
+</div>
+
+    <span><a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2-1/" title="我的第一次博客">我的第一次博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="开始使用Linux操作系统">开始使用Linux操作系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/10/12/pagetags/" title="pagetags">pagetags</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="csapp第二章">csapp第二章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/10/12/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
+</div>
+
+    <span><a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" title="我的第一次博客">我的第一次博客</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Me @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/10/12/开始使用Linux操作系统/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
