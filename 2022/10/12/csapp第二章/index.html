@@ -102,12 +102,12 @@ Yume Shoka = TCworker</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
         </ul>
       </div>
     </header>
@@ -153,91 +153,142 @@ Yume Shoka = TCworker</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="csapp第二章（可能没什么帮助，就随便看看吧）"><a href="#csapp第二章（可能没什么帮助，就随便看看吧）" class="headerlink" title="csapp第二章（可能没什么帮助，就随便看看吧）"></a>csapp第二章（可能没什么帮助，就随便看看吧）</h1><p>（现代计算机以二进制存储信息。相较于十进制，它能更好的适配计算机，能够更可靠的进行信息的表示、存储传输；用不同的位组合来表示元素；三种重要的数字编码：<u>无符号编码</u>，<u>二进制补码</u>，<u>浮点数编码</u>；）</p>
-<h1 id="2-1信息存储"><a href="#2-1信息存储" class="headerlink" title="2.1信息存储"></a>2.1信息存储</h1><p>1.字节（byte）是<strong>8位</strong>的块，<u>作为最小的可寻址的存储器单位</u>&lt;而不是单独的位&gt;.</p>
-<p>2.存储器中每个字节由一个惟一的数字标识，这称之为他的<u>地址</u>。</p>
-<p>3.所有可能地址的集合，称为<u>虚拟地址空间</u>。&lt;像一个分好类别的仓库吧？&gt;</p>
-<p>4.编译和运行时，系统将存储空间划分为更可管理的单元，来存放不同程序对象（程序数据、指令和控制信息）。&lt;分类存放，便于之后的管理与取用&gt;</p>
-<h2 id="2-1-1十六进制表示法"><a href="#2-1-1十六进制表示法" class="headerlink" title="2.1.1十六进制表示法"></a>2.1.1十六进制表示法</h2><p>因为二进制表示太冗长，而十进制与位模式的互相转化很麻烦，两种符号表示法都比较麻烦。所以采取16进制来书写位模式。编写机械级程序常常需要手工地进行十、二、十六之间的转换。<u>需要掌握进制之间的转化方法</u>。</p>
-<h2 id="2-1-2-字"><a href="#2-1-2-字" class="headerlink" title="2.1.2 字"></a>2.1.2 字</h2><p>每台计算机都有一个字长（world size），指明整数和指针数据的标称大小（normal size）。<strong>字长 决定虚拟地址的最大大小</strong>。<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51402475/article/details/124809921">字长是什么</a></p>
-<h2 id="2-1-3-数据大小"><a href="#2-1-3-数据大小" class="headerlink" title="2.1.3 数据大小"></a>2.1.3 数据大小</h2><p>计算机和编译器用不同方式来编码数字，如不同长度的整数和浮点数，从而支持多种数字格式。（程序员应该提高他们编写程序的可移植性，就是说，使得程序对不同数据类型的准确大小不敏感）&lt;就是可以在其他设备，其他系统上运行?&gt;</p>
-<h2 id="2-14寻址和字节顺序"><a href="#2-14寻址和字节顺序" class="headerlink" title="2.14寻址和字节顺序"></a>2.14寻址和字节顺序</h2><p>对于跨越多字节的程序对象，要建立两个规则：1.对象地址是什么；2.在存储器中如何对这些字节排序。几乎所有机器，<u>多字节对象都被存储为连续的字节序列，对象的地址为<strong>所使用字节序列中的最小地址</strong>。</u>（越小越精确，要找到对象的精确地址？）</p>
-<h2 id="2-15-表示字符串"><a href="#2-15-表示字符串" class="headerlink" title="2.15 表示字符串"></a>2.15 表示字符串</h2><p>字符串被编码为一个<strong>以null（其值）字符结尾</strong>的字符数组。每个字符由标准码表示，常用ASCII字符码。（<u>文本数据比二进制数据具有更强的平台独立性</u>）&lt;不是特别理解·-·&gt;</p>
-<h2 id="2-1-6-表示代码"><a href="#2-1-6-表示代码" class="headerlink" title="2.1.6 表示代码"></a>2.1.6 表示代码</h2><p>多数情况下，<u>不同机器类型使用不同且不兼容的指令和编码方式。</u>二进制代码很少能在不同机器和操作系统组合之间移植。</p>
-<h2 id="2-1-7-布尔代数和环"><a href="#2-1-7-布尔代数和环" class="headerlink" title="2.1.7 布尔代数和环"></a>2.1.7 布尔代数和环</h2><p>因为二进制是计算机编码、存储和操作信息的核心，所以围绕数值0和1已经演化出了丰富的数学知识体系。（I compeletly don’t understand what it wants telling me）</p>
-<h2 id="2-1-8-C中的位级运算"><a href="#2-1-8-C中的位级运算" class="headerlink" title="2.1.8  C中的位级运算"></a>2.1.8  C中的位级运算</h2><p>C的一个很有用的特性就是它是支持按位布尔运算，在布尔运算中使用的那些符号就是在C中使用的。（<u>确定一个位级表达式的结果的最好的方法就是将十六进制参数扩展成他们的二进制表示，执行二进制运算，然后再转换为十六进制。&lt;&#x2F;u）</p>
-<h2 id="2-1-9-C中的逻辑运算"><a href="#2-1-9-C中的逻辑运算" class="headerlink" title="2.1.9   C中的逻辑运算"></a>2.1.9   C中的逻辑运算</h2><p>C中提供了一系列的逻辑运算符，但逻辑运算容易与位级运算相混淆，而他们的功能又是完全不同的。{逻辑运算认为所有非零参数都表示true，而参数零表示false}</p>
-<h2 id="2-1-10-C中的移位运算"><a href="#2-1-10-C中的移位运算" class="headerlink" title="2.1.10  C中的移位运算"></a>2.1.10  C中的移位运算</h2><p>C提供了一系列的移位运算，有向左或向右移位模式。（移动后要用0进行补位）</p>
-<h1 id="2-2-整数表示"><a href="#2-2-整数表示" class="headerlink" title="2.2 整数表示"></a>2.2 整数表示</h1><h2 id="2-2-1整型数据类型"><a href="#2-2-1整型数据类型" class="headerlink" title="2.2.1整型数据类型"></a>2.2.1整型数据类型</h2><p>C支持多种整型数据类型——表示有限范围的整数。如char、short、int、、long。C标准定义了每种数据类型必须能够表示的最小值范围。具体而言，数据类型的取值会有差异。</p>
-<h2 id="2-2-2无符号和二进制补码编码"><a href="#2-2-2无符号和二进制补码编码" class="headerlink" title="2.2.2无符号和二进制补码编码"></a>2.2.2无符号和二进制补码编码</h2><ul>
+    <h1 id="csapp第二章可能没什么帮助就随便看看吧"><a class="markdownIt-Anchor" href="#csapp第二章可能没什么帮助就随便看看吧">#</a> csapp 第二章（可能没什么帮助，就随便看看吧）</h1>
+<p>（现代计算机以二进制存储信息。相较于十进制，它能更好的适配计算机，能够更可靠的进行信息的表示、存储传输；用不同的位组合来表示元素；三种重要的数字编码：<u>无符号编码</u>，<u>二进制补码</u>，<u>浮点数编码</u>；）</p>
+<h1 id="21信息存储"><a class="markdownIt-Anchor" href="#21信息存储">#</a> 2.1 信息存储</h1>
+<p>1. 字节（byte）是<strong> 8 位</strong>的块，<u>作为最小的可寻址的存储器单位</u>&lt;而不是单独的位&gt;.</p>
+<p>2. 存储器中每个字节由一个惟一的数字标识，这称之为他的<u>地址</u>。</p>
+<p>3. 所有可能地址的集合，称为<u>虚拟地址空间</u>。&lt;像一个分好类别的仓库吧？&gt;</p>
+<p>4. 编译和运行时，系统将存储空间划分为更可管理的单元，来存放不同程序对象（程序数据、指令和控制信息）。&lt;分类存放，便于之后的管理与取用&gt;</p>
+<h2 id="211十六进制表示法"><a class="markdownIt-Anchor" href="#211十六进制表示法">#</a> 2.1.1 十六进制表示法</h2>
+<p>因为二进制表示太冗长，而十进制与位模式的互相转化很麻烦，两种符号表示法都比较麻烦。所以采取 16 进制来书写位模式。编写机械级程序常常需要手工地进行十、二、十六之间的转换。<u>需要掌握进制之间的转化方法</u>。</p>
+<h2 id="212-字"><a class="markdownIt-Anchor" href="#212-字">#</a> 2.1.2 字</h2>
+<p>每台计算机都有一个字长（world size），指明整数和指针数据的标称大小（normal size）。<strong>字长 决定虚拟地址的最大大小</strong>。<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzUxNDAyNDc1L2FydGljbGUvZGV0YWlscy8xMjQ4MDk5MjE=">字长是什么</span></p>
+<h2 id="213-数据大小"><a class="markdownIt-Anchor" href="#213-数据大小">#</a> 2.1.3 数据大小</h2>
+<p>计算机和编译器用不同方式来编码数字，如不同长度的整数和浮点数，从而支持多种数字格式。（程序员应该提高他们编写程序的可移植性，就是说，使得程序对不同数据类型的准确大小不敏感）&lt;就是可以在其他设备，其他系统上运行？&gt;</p>
+<h2 id="214寻址和字节顺序"><a class="markdownIt-Anchor" href="#214寻址和字节顺序">#</a> 2.14 寻址和字节顺序</h2>
+<p>对于跨越多字节的程序对象，要建立两个规则：1. 对象地址是什么；2. 在存储器中如何对这些字节排序。几乎所有机器，<u>多字节对象都被存储为连续的字节序列，对象的地址为<strong>所使用字节序列中的最小地址</strong>。</u>（越小越精确，要找到对象的精确地址？）</p>
+<h2 id="215-表示字符串"><a class="markdownIt-Anchor" href="#215-表示字符串">#</a> 2.15 表示字符串</h2>
+<p>字符串被编码为一个<strong>以 null（其值）字符结尾</strong>的字符数组。每个字符由标准码表示，常用 ASCII 字符码。（<u>文本数据比二进制数据具有更强的平台独立性</u>）&lt;不是特别理解・-・&gt;</p>
+<h2 id="216-表示代码"><a class="markdownIt-Anchor" href="#216-表示代码">#</a> 2.1.6 表示代码</h2>
+<p>多数情况下，<u>不同机器类型使用不同且不兼容的指令和编码方式。</u>二进制代码很少能在不同机器和操作系统组合之间移植。</p>
+<h2 id="217-布尔代数和环"><a class="markdownIt-Anchor" href="#217-布尔代数和环">#</a> 2.1.7 布尔代数和环</h2>
+<p>因为二进制是计算机编码、存储和操作信息的核心，所以围绕数值 0 和 1 已经演化出了丰富的数学知识体系。（I compeletly don’t understand what it wants telling me）</p>
+<h2 id="218-c中的位级运算"><a class="markdownIt-Anchor" href="#218-c中的位级运算">#</a> 2.1.8  C 中的位级运算</h2>
+<p>C 的一个很有用的特性就是它是支持按位布尔运算，在布尔运算中使用的那些符号就是在 C 中使用的。（<u>确定一个位级表达式的结果的最好的方法就是将十六进制参数扩展成他们的二进制表示，执行二进制运算，然后再转换为十六进制。&lt;/u）</p>
+<h2 id="219-c中的逻辑运算"><a class="markdownIt-Anchor" href="#219-c中的逻辑运算">#</a> 2.1.9   C 中的逻辑运算</h2>
+<p 逻辑运算认为所有非零参数都表示true，而参数零表示false="">C 中提供了一系列的逻辑运算符，但逻辑运算容易与位级运算相混淆，而他们的功能又是完全不同的。</p>
+<h2 id="2110-c中的移位运算"><a class="markdownIt-Anchor" href="#2110-c中的移位运算">#</a> 2.1.10  C 中的移位运算</h2>
+<p>C 提供了一系列的移位运算，有向左或向右移位模式。（移动后要用 0 进行补位）</p>
+<h1 id="22-整数表示"><a class="markdownIt-Anchor" href="#22-整数表示">#</a> 2.2 整数表示</h1>
+<h2 id="221整型数据类型"><a class="markdownIt-Anchor" href="#221整型数据类型">#</a> 2.2.1 整型数据类型</h2>
+<p>C 支持多种整型数据类型 —— 表示有限范围的整数。如 char、short、int、、long。C 标准定义了每种数据类型必须能够表示的最小值范围。具体而言，数据类型的取值会有差异。</p>
+<h2 id="222无符号和二进制补码编码"><a class="markdownIt-Anchor" href="#222无符号和二进制补码编码">#</a> 2.2.2 无符号和二进制补码编码</h2>
+<ul>
 <li>二进制的补码范围是不对称的，容易产生错误。</li>
 <li>最大无符号值刚好比二进制补码的最大值的两倍大一（1）点。</li>
-<li>尽管C的标准没有要求用二进制补码形式来表示有符号整数，但几乎所有机器都是这么的。</li>
-<li>对有符号数，其最高有效位也称为符号位（sign bit），0为正，1为负。</li>
+<li>尽管 C 的标准没有要求用二进制补码形式来表示有符号整数，但几乎所有机器都是这么的。</li>
+<li>对有符号数，其最高有效位也称为符号位（sign bit），0 为正，1 为负。</li>
 </ul>
-<h2 id="2-2-3有符号数和无符号数之间的转换"><a href="#2-2-3有符号数和无符号数之间的转换" class="headerlink" title="2.2.3有符号数和无符号数之间的转换"></a>2.2.3有符号数和无符号数之间的转换</h2><p>依托两者之间的映射关系进行转换，具体方法如有需要：<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/51297200.html">有符号数如何与无符号数转换</a>                    &lt;用ctrl+点击&gt;</p>
-<h2 id="2-2-4-C中的有符号与无符号数"><a href="#2-2-4-C中的有符号与无符号数" class="headerlink" title="2.2.4 C中的有符号与无符号数"></a>2.2.4 C中的有符号与无符号数</h2><p>C支持所有整数数据类型的有符号与无符号运算。尽管C标准没有指定某种有符号数的表示，但几乎所有机器都使用二进制补码。通常，大多数数字都是默认有符号的。（另外，当一种类型的表达式被赋值给另一种类型的变量时，转换是隐式发生的）</p>
-<p>当执行一个运算时，如果它的一个运算数是有符号而另一个是无符号，那么C将有符号参数类型转换为无符号数，并假设两数非负，并执行。（于一些情况下会导致运算错误）</p>
-<h2 id="2-2-5扩展一个数字的位表示"><a href="#2-2-5扩展一个数字的位表示" class="headerlink" title="2.2.5扩展一个数字的位表示"></a>2.2.5扩展一个数字的位表示</h2><p>一个常见的运算是在不同字长的整数之间转换，同时保持数值不变。而当目标类型太小了，则转换可能失效，但从较小到较大，应该总可能的。（*<em>将一个无符号数转换为一个更大的数据类型，只要简单的在表示的开头添加0，这种运算被称为零扩展（zero extension）；要将一个二进制补码数字转换俄日一个更大的数据类型，规则是执行一个符号扩展（sign extension），在表示中添加最高有效位的值）。</em></p>
+<h2 id="223有符号数和无符号数之间的转换"><a class="markdownIt-Anchor" href="#223有符号数和无符号数之间的转换">#</a> 2.2.3 有符号数和无符号数之间的转换</h2>
+<p>依托两者之间的映射关系进行转换，具体方法如有需要：<span class="exturl" data-url="aHR0cHM6Ly96aGlkYW8uYmFpZHUuY29tL3F1ZXN0aW9uLzUxMjk3MjAwLmh0bWw=">有符号数如何与无符号数转换</span>                    &lt;用 ctrl + 点击&gt;</p>
+<h2 id="224-c中的有符号与无符号数"><a class="markdownIt-Anchor" href="#224-c中的有符号与无符号数">#</a> 2.2.4 C 中的有符号与无符号数</h2>
+<p>C 支持所有整数数据类型的有符号与无符号运算。尽管 C 标准没有指定某种有符号数的表示，但几乎所有机器都使用二进制补码。通常，大多数数字都是默认有符号的。（另外，当一种类型的表达式被赋值给另一种类型的变量时，转换是隐式发生的）</p>
+<p>当执行一个运算时，如果它的一个运算数是有符号而另一个是无符号，那么 C 将有符号参数类型转换为无符号数，并假设两数非负，并执行。（于一些情况下会导致运算错误）</p>
+<h2 id="225扩展一个数字的位表示"><a class="markdownIt-Anchor" href="#225扩展一个数字的位表示">#</a> 2.2.5 扩展一个数字的位表示</h2>
+<p>一个常见的运算是在不同字长的整数之间转换，同时保持数值不变。而当目标类型太小了，则转换可能失效，但从较小到较大，应该总可能的。（*<em> 将一个无符号数转换为一个更大的数据类型，只要简单的在表示的开头添加 0，这种运算被称为零扩展（zero extension）；要将一个二进制补码数字转换俄日一个更大的数据类型，规则是执行一个符号扩展（sign extension），在表示中添加最高有效位的值）。</em></p>
 <p>从一个数据大小到另一个数据大小，以及<u>无符号和有符号数字之间的转换的相对顺序</u>能够影响一个程序的行为。</p>
-<h2 id="2-2-6-截断数字"><a href="#2-2-6-截断数字" class="headerlink" title="2.2.6 截断数字"></a>2.2.6 截断数字</h2><p>详见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/lipanpan900721/article/details/120804417">截断数字</a></p>
-<h2 id="2-2-7有符号数和无符号数的建议"><a href="#2-2-7有符号数和无符号数的建议" class="headerlink" title="2.2.7有符号数和无符号数的建议"></a>2.2.7有符号数和无符号数的建议</h2><p>1.尽量不要在你的代码中使用无符号数，以免增加不必需要的复杂性。</p>
-<p>2.尽量使用像int那样的有符号类型，这样在涉及升级混合类型的复杂细节时，不必担心边界情况。</p>
-<p>3.只有在使用位段和二进制掩码时，才可以用无符号数。应该在表达式中使用强制类型转换，使操作数均为有符号或无符号数，这样就不必由编译器来选择结果的类型。</p>
-<h1 id="2-3-整数运算"><a href="#2-3-整数运算" class="headerlink" title="2.3 整数运算"></a>2.3 整数运算</h1><h2 id="2-3-1无符号加法"><a href="#2-3-1无符号加法" class="headerlink" title="2.3.1无符号加法"></a>2.3.1无符号加法</h2><ul>
+<h2 id="226-截断数字"><a class="markdownIt-Anchor" href="#226-截断数字">#</a> 2.2.6 截断数字</h2>
+<p>详见：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpcGFucGFuOTAwNzIxL2FydGljbGUvZGV0YWlscy8xMjA4MDQ0MTc=">截断数字</span></p>
+<h2 id="227有符号数和无符号数的建议"><a class="markdownIt-Anchor" href="#227有符号数和无符号数的建议">#</a> 2.2.7 有符号数和无符号数的建议</h2>
+<p>1. 尽量不要在你的代码中使用无符号数，以免增加不必需要的复杂性。</p>
+<p>2. 尽量使用像 int 那样的有符号类型，这样在涉及升级混合类型的复杂细节时，不必担心边界情况。</p>
+<p>3. 只有在使用位段和二进制掩码时，才可以用无符号数。应该在表达式中使用强制类型转换，使操作数均为有符号或无符号数，这样就不必由编译器来选择结果的类型。</p>
+<h1 id="23-整数运算"><a class="markdownIt-Anchor" href="#23-整数运算">#</a> 2.3 整数运算</h1>
+<h2 id="231无符号加法"><a class="markdownIt-Anchor" href="#231无符号加法">#</a> 2.3.1 无符号加法</h2>
+<ul>
 <li>要想完整地表示运算结果，不能对字长做任何限制。</li>
-<li>常见的编程语言支持固定精度的运算，因此“加法”和“乘法”这样的运算不同于它们在整数上的相应运算。</li>
+<li>常见的编程语言支持固定精度的运算，因此 “加法” 和 “乘法” 这样的运算不同于它们在整数上的相应运算。</li>
 <li>无符号运算可视作一种形式的模运算。</li>
-<li><u><strong>算术运算溢出</strong></u>，是指完整的整数结果不能放到数据类型的字长限制中。（<u>执行C程序时，不会将溢出作为错误而发出信号</u>）</li>
+<li><u><strong>算术运算溢出</strong></u>，是指完整的整数结果不能放到数据类型的字长限制中。（<u>执行 C 程序时，不会将溢出作为错误而发出信号</u>）</li>
 </ul>
-<h2 id="2-3-2二进制补码加法"><a href="#2-3-2二进制补码加法" class="headerlink" title="2.3.2二进制补码加法"></a>2.3.2二进制补码加法</h2><p>与无符号加法有相似之处，详见导引。</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Zwn_223/article/details/120168798">1号导引</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.zhangshilong.cn/work/260595.html">2号导引</a></p>
-<h2 id="2-3-3-二进制补码的非"><a href="#2-3-3-二进制补码的非" class="headerlink" title="2.3.3 二进制补码的非"></a>2.3.3 二进制补码的非</h2><p>一种有名的用来执行位级二进制补码的非（negation）的 技术是对每个位取反（或取补），然后将结果加一。（以后还请回看csapp   &gt;_&lt;）</p>
-<h2 id="2-3-4无符号乘法"><a href="#2-3-4无符号乘法" class="headerlink" title="2.3.4无符号乘法"></a>2.3.4无符号乘法</h2><ol>
-<li><p>0*0&#x3D;0</p>
+<h2 id="232二进制补码加法"><a class="markdownIt-Anchor" href="#232二进制补码加法">#</a> 2.3.2 二进制补码加法</h2>
+<p>与无符号加法有相似之处，详见导引。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1p3bl8yMjMvYXJ0aWNsZS9kZXRhaWxzLzEyMDE2ODc5OA==">1 号导引</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhhbmdzaGlsb25nLmNuL3dvcmsvMjYwNTk1Lmh0bWw=">2 号导引</span></p>
+<h2 id="233-二进制补码的非"><a class="markdownIt-Anchor" href="#233-二进制补码的非">#</a> 2.3.3 二进制补码的非</h2>
+<p>一种有名的用来执行位级二进制补码的非（negation）的 技术是对每个位取反（或取补），然后将结果加一。（以后还请回看 csapp   &gt;_&lt;）</p>
+<h2 id="234无符号乘法"><a class="markdownIt-Anchor" href="#234无符号乘法">#</a> 2.3.4 无符号乘法</h2>
+<ol>
+<li>
+<p>0*0=0</p>
 </li>
-<li><p>0*1&#x3D;0</p>
+<li>
+<p>0*1=0</p>
 </li>
-<li><p>1*0&#x3D;0</p>
+<li>
+<p>1*0=0</p>
 </li>
-<li><p>1*1&#x3D;1</p>
+<li>
+<p>1*1=1</p>
 <p>二进制乘法相似于十进制乘法。</p>
 </li>
 </ol>
-<h2 id="2-3-5二进制补码乘法"><a href="#2-3-5二进制补码乘法" class="headerlink" title="2.3.5二进制补码乘法"></a>2.3.5二进制补码乘法</h2><ul>
-<li>补码 * 补码 &#x3D; 补码（什么哦<em>^</em>）</li>
-<li>1、无符号数 * 无符号数 &#x3D; 无符号数<br>2、无符号数 * 有符号数 &#x3D; 有符号数<br>3、有符号数 * 无符号数 &#x3D; 有符号数<br>4、有符号数 * 有符号数 &#x3D; 有符号数</li>
+<h2 id="235二进制补码乘法"><a class="markdownIt-Anchor" href="#235二进制补码乘法">#</a> 2.3.5 二进制补码乘法</h2>
+<ul>
+<li>补码 * 补码 = 补码（什么哦 *^*）</li>
+<li>1、无符号数 * 无符号数 = 无符号数<br>
+ 2、无符号数 * 有符号数 = 有符号数<br>
+ 3、有符号数 * 无符号数 = 有符号数<br>
+ 4、有符号数 * 有符号数 = 有符号数</li>
 </ul>
-<h2 id="2-3-6与2-3-7-乘除2的幂"><a href="#2-3-6与2-3-7-乘除2的幂" class="headerlink" title="2.3.6与2.3.7  乘除2的幂"></a>2.3.6与2.3.7  乘除2的幂</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/pumpi/article/details/104497529">计算2的幂的解方法</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gdjdsjh/p/5037673.html#:~:text=%E5%9C%A8%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E6%9C%BA%E5%99%A8%E4%B8%AD%EF%BC%8C%E9%99%A4%E6%B3%95%E8%A6%81%E6%AF%94%E4%B9%98%E6%B3%95%E8%BF%98%E6%9C%89%E5%8A%A0%E6%B3%95%E8%BF%99%E4%BA%9B">具体解释1</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40446252/article/details/109380011">通过位运算来进行2的幂运算</a></li>
+<h2 id="236与237-乘除2的幂"><a class="markdownIt-Anchor" href="#236与237-乘除2的幂">#</a> 2.3.6 与 2.3.7  乘除 2 的幂</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3B1bXBpL2FydGljbGUvZGV0YWlscy8xMDQ0OTc1Mjk=">计算 2 的幂的解方法</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZ2RqZHNqaC9wLzUwMzc2NzMuaHRtbCM6fjp0ZXh0PSVFNSU5QyVBOCVFNSVBNCVBNyVFNSVBNCU5QSVFNiU5NSVCMCVFNyU5QSU4NCVFNiU5QyVCQSVFNSU5OSVBOCVFNCVCOCVBRCVFRiVCQyU4QyVFOSU5OSVBNCVFNiVCMyU5NSVFOCVBNiU4MSVFNiVBRiU5NCVFNCVCOSU5OCVFNiVCMyU5NSVFOCVCRiU5OCVFNiU5QyU4OSVFNSU4QSVBMCVFNiVCMyU5NSVFOCVCRiU5OSVFNCVCQSU5Qg==">具体解释 1</span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDQ0NjI1Mi9hcnRpY2xlL2RldGFpbHMvMTA5MzgwMDEx">通过位运算来进行 2 的幂运算</span></li>
 </ul>
-<h1 id="2-4浮点"><a href="#2-4浮点" class="headerlink" title="2.4浮点"></a>2.4浮点</h1><p>用于精确的计算，提高运算精度。</p>
-<h2 id="2-4-1-二进制小数"><a href="#2-4-1-二进制小数" class="headerlink" title="2.4.1  二进制小数"></a>2.4.1  二进制小数</h2><ul>
-<li><p><strong>与十进制类似，用科学计数法表示（以2作指数底数）。</strong></p>
+<h1 id="24浮点"><a class="markdownIt-Anchor" href="#24浮点">#</a> 2.4 浮点</h1>
+<p>用于精确的计算，提高运算精度。</p>
+<h2 id="241-二进制小数"><a class="markdownIt-Anchor" href="#241-二进制小数">#</a> 2.4.1  二进制小数</h2>
+<ul>
+<li>
+<p><strong>与十进制类似，用科学计数法表示（以 2 作指数底数）。</strong></p>
 </li>
-<li><p><strong>分为整数与小数两个部分，常常要在运算中分离处理</strong></p>
+<li>
+<p><strong>分为整数与小数两个部分，常常要在运算中分离处理</strong></p>
 </li>
-<li><p><strong>二进制小数末尾添上0或去掉0，小数的大小也不变，但是意义不一样。</strong></p>
+<li>
+<p><strong>二进制小数末尾添上 0 或去掉 0，小数的大小也不变，但是意义不一样。</strong></p>
 </li>
-<li><p><strong>正二进制整数或小数的开头添上0或去掉0，数的大小不变。负二进制整数或小数的开头添上1或去掉1，数的大小也不变。</strong></p>
+<li>
+<p><strong>正二进制整数或小数的开头添上 0 或去掉 0，数的大小不变。负二进制整数或小数的开头添上 1 或去掉 1，数的大小也不变。</strong></p>
 </li>
 </ul>
-<h2 id="2-4-2-IEEE浮点表示"><a href="#2-4-2-IEEE浮点表示" class="headerlink" title="2.4.2  IEEE浮点表示"></a>2.4.2  IEEE浮点表示</h2><p>IEEE标准754规定了三种浮点数格式：单精度、双精度、扩展精度。前两者正好对应C语言里头的float、double或者FORTRAN里头的real、double精度类型。</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43979304/article/details/108044754">详见</a></p>
-<h2 id="2-4-3-数值示例"><a href="#2-4-3-数值示例" class="headerlink" title="2.4.3 数值示例"></a>2.4.3 数值示例</h2><p>来日方长：详见csapp  p87</p>
-<p><img src="C:\Users\陈林海\Desktop\有效协议\截图20221002221650.png" alt="截图20221002221650"></p>
-<h2 id="2-4-4舍入"><a href="#2-4-4舍入" class="headerlink" title="2.4.4舍入"></a>2.4.4舍入</h2><p>因为表示方法限制了浮点数的范围和精度，所以浮点运算只能近似表示实数运算。</p>
+<h2 id="242-ieee浮点表示"><a class="markdownIt-Anchor" href="#242-ieee浮点表示">#</a> 2.4.2  IEEE 浮点表示</h2>
+<p>IEEE 标准 754 规定了三种浮点数格式：单精度、双精度、扩展精度。前两者正好对应 C 语言里头的 float、double 或者 FORTRAN 里头的 real、double 精度类型。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk3OTMwNC9hcnRpY2xlL2RldGFpbHMvMTA4MDQ0NzU0">详见</span></p>
+<h2 id="243-数值示例"><a class="markdownIt-Anchor" href="#243-数值示例">#</a> 2.4.3 数值示例</h2>
+<p>来日方长：详见 csapp  p87</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/TCworkor/blog-img/%E6%88%AA%E5%9B%BE20221002221650.png" alt="截图20221002221650"></p>
+<h2 id="244舍入"><a class="markdownIt-Anchor" href="#244舍入">#</a> 2.4.4 舍入</h2>
+<p>因为表示方法限制了浮点数的范围和精度，所以浮点运算只能近似表示实数运算。</p>
 <p>舍入运算，可以找到最接近的匹配值。（需要定义舍入方向）</p>
 <p>舍入会存在偏差，（向偶数舍入可以避免偏差）</p>
-<h2 id="2-4-5-浮点运算"><a href="#2-4-5-浮点运算" class="headerlink" title="2.4.5 浮点运算"></a>2.4.5 浮点运算</h2><ul>
-<li><p>浮点数的加减运算分为5个步骤：对阶、尾数相加、尾数规格化、尾数舍入处理、溢出判断处理。</p>
-<h5 id="1-对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。"><a href="#1-对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。" class="headerlink" title="1. 对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。"></a>1. 对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。</h5><h5 id="2-尾数加减：将两个操作数的尾数相加减。在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，"><a href="#2-尾数加减：将两个操作数的尾数相加减。在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，" class="headerlink" title="2. 尾数加减：将两个操作数的尾数相加减。在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，"></a>2. 尾数加减：将两个操作数的尾数相加减。在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，</h5><h5 id="3-尾数规格化：加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000-0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111-1111）。"><a href="#3-尾数规格化：加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000-0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111-1111）。" class="headerlink" title="3.尾数规格化：加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。"></a>3.尾数规格化：加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。</h5><h5 id="4-尾数的舍入处理："><a href="#4-尾数的舍入处理：" class="headerlink" title="4. 尾数的舍入处理："></a>4. 尾数的舍入处理：</h5><h5 id="5-溢出判断：-在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126-。"><a href="#5-溢出判断：-在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126-。" class="headerlink" title="5. 溢出判断：  在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126)。"></a><img src="C:\Users\陈林海\Desktop\2020040900384131.png" alt="2020040900384131">5. 溢出判断：  在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126)。</h5></li>
+<h2 id="245-浮点运算"><a class="markdownIt-Anchor" href="#245-浮点运算">#</a> 2.4.5 浮点运算</h2>
+<ul>
+<li>
+<p>浮点数的加减运算分为 5 个步骤：对阶、尾数相加、尾数规格化、尾数舍入处理、溢出判断处理。</p>
+<h5 id="1-对阶所谓对阶就是让两个操作数阶数相同以便进行加减-实现的方式是对较小数的尾数进行右移操作-对阶的原则是向高阶看齐"><a class="markdownIt-Anchor" href="#1-对阶所谓对阶就是让两个操作数阶数相同以便进行加减-实现的方式是对较小数的尾数进行右移操作-对阶的原则是向高阶看齐">#</a> 1. 对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。</h5>
+<h5 id="2-尾数加减将两个操作数的尾数相加减-在ieee754标准中对于规格化数来说在小数点前有一位隐藏位1在加减过程中需要把它还原到尾数中-尾数加减的实质是原码的加减"><a class="markdownIt-Anchor" href="#2-尾数加减将两个操作数的尾数相加减-在ieee754标准中对于规格化数来说在小数点前有一位隐藏位1在加减过程中需要把它还原到尾数中-尾数加减的实质是原码的加减">#</a> 2. 尾数加减：将两个操作数的尾数相加减。在 IEEE754 标准中，对于规格化数来说在小数点前有一位隐藏位 1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，</h5>
+<h5 id="3尾数规格化加减完成的尾数形式未必满足ieee754对于尾数的要求即保留23位小数点在第一个1之后-需要对尾数进行左规和右规下面介绍一下左规和右规-左规将尾数向左移用于清除第一个1前面出现的0-左规伴随着阶码减少在左规过程中要检测阶码是否发生下溢即阶码达到最小值0000-0000-右规将尾数向右移用于两数相加后出现向高位进位的情况-因为两数相加最多进一位所以右规最多一位-右规伴随着阶码的增加在右规过程中要检测阶码是否发生上溢即阶码达到最大值1111-1111"><a class="markdownIt-Anchor" href="#3尾数规格化加减完成的尾数形式未必满足ieee754对于尾数的要求即保留23位小数点在第一个1之后-需要对尾数进行左规和右规下面介绍一下左规和右规-左规将尾数向左移用于清除第一个1前面出现的0-左规伴随着阶码减少在左规过程中要检测阶码是否发生下溢即阶码达到最小值0000-0000-右规将尾数向右移用于两数相加后出现向高位进位的情况-因为两数相加最多进一位所以右规最多一位-右规伴随着阶码的增加在右规过程中要检测阶码是否发生上溢即阶码达到最大值1111-1111">#</a> 3. 尾数规格化：加减完成的尾数形式未必满足 IEEE754 对于尾数的要求，即保留 23 位，小数点在第一个 1 之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个 1 前面出现的 0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。</h5>
+<h5 id="4-尾数的舍入处理"><a class="markdownIt-Anchor" href="#4-尾数的舍入处理">#</a> 4. 尾数的舍入处理：</h5>
+<h5 id="20200409003841315-溢出判断-在浮点数中是以阶码的溢出与否来作为评判标准的-单精度溢出分为上溢指数大于等于127和下溢指数小于等于-126"><a class="markdownIt-Anchor" href="#20200409003841315-溢出判断-在浮点数中是以阶码的溢出与否来作为评判标准的-单精度溢出分为上溢指数大于等于127和下溢指数小于等于-126">#</a> <img data-src="C:%5CUsers%5C%E9%99%88%E6%9E%97%E6%B5%B7%5CDesktop%5C2020040900384131.png" alt="2020040900384131">5. 溢出判断：  在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于 127）和下溢（指数小于等于 - 126)。</h5>
+</li>
 </ul>
-<p>详见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/gls_nuaa/article/details/105401372">详见</a></p>
-<h1 id="2-5-小结"><a href="#2-5-小结" class="headerlink" title="2.5 小结"></a>2.5 小结</h1><p>虽然有很多不懂，但是就当作练习使用typora吧。以后回来看这些笔记怎么说也有帮助吧。（+-+）</p>
+<p>详见：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dsc19udWFhL2FydGljbGUvZGV0YWlscy8xMDU0MDEzNzI=">详见</span></p>
+<h1 id="25-小结"><a class="markdownIt-Anchor" href="#25-小结">#</a> 2.5 小结</h1>
+<p>虽然有很多不懂，但是就当作练习使用 typora 吧。以后回来看这些笔记怎么说也有帮助吧。（±+）</p>
 
       <div class="tags">
           <a href="/tags/csapp/" rel="tag"><i class="ic i-tag"></i> csapp</a>
@@ -252,7 +303,7 @@ Yume Shoka = TCworker</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2022-10-12 19:20:43" itemprop="dateModified" datetime="2022-10-12T19:20:43+08:00">2022-10-12</time>
+    <time title="修改时间：2022-10-16 20:34:29" itemprop="dateModified" datetime="2022-10-16T20:34:29+08:00">2022-10-16</time>
   </span>
 </div>
 
@@ -307,7 +358,7 @@ Yume Shoka = TCworker</title>
     <div class="item left">
       
 
-  <a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesng5oej20zk0m87d4.jpg" title="开始使用Linux操作系统">
+  <a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicljitigmj20zk0m87fp.jpg" title="开始使用Linux操作系统">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 理论知识</span>
   <h3>开始使用Linux操作系统</h3>
@@ -331,7 +382,7 @@ Yume Shoka = TCworker</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%88%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%80%E4%B9%88%E5%B8%AE%E5%8A%A9%EF%BC%8C%E5%B0%B1%E9%9A%8F%E4%BE%BF%E7%9C%8B%E7%9C%8B%E5%90%A7%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">csapp第二章（可能没什么帮助，就随便看看吧）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8"><span class="toc-number">2.</span> <span class="toc-text">2.1信息存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-1%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">2.1.1十六进制表示法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-2-%E5%AD%97"><span class="toc-number">2.2.</span> <span class="toc-text">2.1.2 字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-3-%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.3.</span> <span class="toc-text">2.1.3 数据大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-14%E5%AF%BB%E5%9D%80%E5%92%8C%E5%AD%97%E8%8A%82%E9%A1%BA%E5%BA%8F"><span class="toc-number">2.4.</span> <span class="toc-text">2.14寻址和字节顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-15-%E8%A1%A8%E7%A4%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.5.</span> <span class="toc-text">2.15 表示字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-6-%E8%A1%A8%E7%A4%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">2.6.</span> <span class="toc-text">2.1.6 表示代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-7-%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0%E5%92%8C%E7%8E%AF"><span class="toc-number">2.7.</span> <span class="toc-text">2.1.7 布尔代数和环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-8-C%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%BA%A7%E8%BF%90%E7%AE%97"><span class="toc-number">2.8.</span> <span class="toc-text">2.1.8  C中的位级运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-9-C%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">2.9.</span> <span class="toc-text">2.1.9   C中的逻辑运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-10-C%E4%B8%AD%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">2.10.</span> <span class="toc-text">2.1.10  C中的移位运算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-2-%E6%95%B4%E6%95%B0%E8%A1%A8%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">2.2 整数表示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-1%E6%95%B4%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">2.2.1整型数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-2%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E7%BC%96%E7%A0%81"><span class="toc-number">3.2.</span> <span class="toc-text">2.2.2无符号和二进制补码编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-3%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%92%8C%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.3.</span> <span class="toc-text">2.2.3有符号数和无符号数之间的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-4-C%E4%B8%AD%E7%9A%84%E6%9C%89%E7%AC%A6%E5%8F%B7%E4%B8%8E%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="toc-number">3.4.</span> <span class="toc-text">2.2.4 C中的有符号与无符号数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-5%E6%89%A9%E5%B1%95%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97%E7%9A%84%E4%BD%8D%E8%A1%A8%E7%A4%BA"><span class="toc-number">3.5.</span> <span class="toc-text">2.2.5扩展一个数字的位表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-6-%E6%88%AA%E6%96%AD%E6%95%B0%E5%AD%97"><span class="toc-number">3.6.</span> <span class="toc-text">2.2.6 截断数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-7%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%92%8C%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E5%BB%BA%E8%AE%AE"><span class="toc-number">3.7.</span> <span class="toc-text">2.2.7有符号数和无符号数的建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-3-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">4.</span> <span class="toc-text">2.3 整数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-1%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%8A%A0%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">2.3.1无符号加法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-2%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E5%8A%A0%E6%B3%95"><span class="toc-number">4.2.</span> <span class="toc-text">2.3.2二进制补码加法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-3-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E7%9A%84%E9%9D%9E"><span class="toc-number">4.3.</span> <span class="toc-text">2.3.3 二进制补码的非</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-4%E6%97%A0%E7%AC%A6%E5%8F%B7%E4%B9%98%E6%B3%95"><span class="toc-number">4.4.</span> <span class="toc-text">2.3.4无符号乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-5%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E4%B9%98%E6%B3%95"><span class="toc-number">4.5.</span> <span class="toc-text">2.3.5二进制补码乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-6%E4%B8%8E2-3-7-%E4%B9%98%E9%99%A42%E7%9A%84%E5%B9%82"><span class="toc-number">4.6.</span> <span class="toc-text">2.3.6与2.3.7  乘除2的幂</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-4%E6%B5%AE%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">2.4浮点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-1-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0"><span class="toc-number">5.1.</span> <span class="toc-text">2.4.1  二进制小数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-2-IEEE%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="toc-number">5.2.</span> <span class="toc-text">2.4.2  IEEE浮点表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-3-%E6%95%B0%E5%80%BC%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.3.</span> <span class="toc-text">2.4.3 数值示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-4%E8%88%8D%E5%85%A5"><span class="toc-number">5.4.</span> <span class="toc-text">2.4.4舍入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-5-%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97"><span class="toc-number">5.5.</span> <span class="toc-text">2.4.5 浮点运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AF%B9%E9%98%B6%EF%BC%9A%E6%89%80%E8%B0%93%E5%AF%B9%E9%98%B6%EF%BC%8C%E5%B0%B1%E6%98%AF%E8%AE%A9%E4%B8%A4%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E9%98%B6%E6%95%B0%E7%9B%B8%E5%90%8C%EF%BC%8C%E4%BB%A5%E4%BE%BF%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%87%8F%E3%80%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%96%B9%E5%BC%8F%E6%98%AF%E5%AF%B9%E8%BE%83%E5%B0%8F%E6%95%B0%E7%9A%84%E5%B0%BE%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%8F%B3%E7%A7%BB%E6%93%8D%E4%BD%9C%E3%80%82%E5%AF%B9%E9%98%B6%E7%9A%84%E5%8E%9F%E5%88%99%E6%98%AF%E5%90%91%E9%AB%98%E9%98%B6%E7%9C%8B%E9%BD%90%E3%80%82"><span class="toc-number">5.5.0.0.1.</span> <span class="toc-text">1. 对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%B0%BE%E6%95%B0%E5%8A%A0%E5%87%8F%EF%BC%9A%E5%B0%86%E4%B8%A4%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E7%9A%84%E5%B0%BE%E6%95%B0%E7%9B%B8%E5%8A%A0%E5%87%8F%E3%80%82%E5%9C%A8IEEE754%E6%A0%87%E5%87%86%E4%B8%AD%EF%BC%8C%E5%AF%B9%E4%BA%8E%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0%E6%9D%A5%E8%AF%B4%E5%9C%A8%E5%B0%8F%E6%95%B0%E7%82%B9%E5%89%8D%E6%9C%89%E4%B8%80%E4%BD%8D%E9%9A%90%E8%97%8F%E4%BD%8D1%EF%BC%8C%E5%9C%A8%E5%8A%A0%E5%87%8F%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%9C%80%E8%A6%81%E6%8A%8A%E5%AE%83%E8%BF%98%E5%8E%9F%E5%88%B0%E5%B0%BE%E6%95%B0%E4%B8%AD%E3%80%82%E5%B0%BE%E6%95%B0%E5%8A%A0%E5%87%8F%E7%9A%84%E5%AE%9E%E8%B4%A8%E6%98%AF%E5%8E%9F%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F%EF%BC%8C"><span class="toc-number">5.5.0.0.2.</span> <span class="toc-text">2. 尾数加减：将两个操作数的尾数相加减。在IEEE754标准中，对于规格化数来说在小数点前有一位隐藏位1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B0%BE%E6%95%B0%E8%A7%84%E6%A0%BC%E5%8C%96%EF%BC%9A%E5%8A%A0%E5%87%8F%E5%AE%8C%E6%88%90%E7%9A%84%E5%B0%BE%E6%95%B0%E5%BD%A2%E5%BC%8F%E6%9C%AA%E5%BF%85%E6%BB%A1%E8%B6%B3IEEE754%E5%AF%B9%E4%BA%8E%E5%B0%BE%E6%95%B0%E7%9A%84%E8%A6%81%E6%B1%82%EF%BC%8C%E5%8D%B3%E4%BF%9D%E7%95%9923%E4%BD%8D%EF%BC%8C%E5%B0%8F%E6%95%B0%E7%82%B9%E5%9C%A8%E7%AC%AC%E4%B8%80%E4%B8%AA1%E4%B9%8B%E5%90%8E%E3%80%82%E9%9C%80%E8%A6%81%E5%AF%B9%E5%B0%BE%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%B7%A6%E8%A7%84%E5%92%8C%E5%8F%B3%E8%A7%84%EF%BC%8C%E4%B8%8B%E9%9D%A2%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%E5%B7%A6%E8%A7%84%E5%92%8C%E5%8F%B3%E8%A7%84%E3%80%82%E5%B7%A6%E8%A7%84%EF%BC%9A%E5%B0%86%E5%B0%BE%E6%95%B0%E5%90%91%E5%B7%A6%E7%A7%BB%EF%BC%8C%E7%94%A8%E4%BA%8E%E6%B8%85%E9%99%A4%E7%AC%AC%E4%B8%80%E4%B8%AA1%E5%89%8D%E9%9D%A2%E5%87%BA%E7%8E%B0%E7%9A%840%E3%80%82%E5%B7%A6%E8%A7%84%E4%BC%B4%E9%9A%8F%E7%9D%80%E9%98%B6%E7%A0%81%E5%87%8F%E5%B0%91%EF%BC%8C%E5%9C%A8%E5%B7%A6%E8%A7%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%A6%81%E6%A3%80%E6%B5%8B%E9%98%B6%E7%A0%81%E6%98%AF%E5%90%A6%E5%8F%91%E7%94%9F%E4%B8%8B%E6%BA%A2%EF%BC%8C%E5%8D%B3%E9%98%B6%E7%A0%81%E8%BE%BE%E5%88%B0%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%880000-0000%EF%BC%89%E3%80%82%E5%8F%B3%E8%A7%84%EF%BC%9A%E5%B0%86%E5%B0%BE%E6%95%B0%E5%90%91%E5%8F%B3%E7%A7%BB%EF%BC%8C%E7%94%A8%E4%BA%8E%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E5%90%8E%E5%87%BA%E7%8E%B0%E5%90%91%E9%AB%98%E4%BD%8D%E8%BF%9B%E4%BD%8D%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82%E5%9B%A0%E4%B8%BA%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E6%9C%80%E5%A4%9A%E8%BF%9B%E4%B8%80%E4%BD%8D%EF%BC%8C%E6%89%80%E4%BB%A5%E5%8F%B3%E8%A7%84%E6%9C%80%E5%A4%9A%E4%B8%80%E4%BD%8D%E3%80%82%E5%8F%B3%E8%A7%84%E4%BC%B4%E9%9A%8F%E7%9D%80%E9%98%B6%E7%A0%81%E7%9A%84%E5%A2%9E%E5%8A%A0%EF%BC%8C%E5%9C%A8%E5%8F%B3%E8%A7%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%A6%81%E6%A3%80%E6%B5%8B%E9%98%B6%E7%A0%81%E6%98%AF%E5%90%A6%E5%8F%91%E7%94%9F%E4%B8%8A%E6%BA%A2%EF%BC%8C%E5%8D%B3%E9%98%B6%E7%A0%81%E8%BE%BE%E5%88%B0%E6%9C%80%E5%A4%A7%E5%80%BC%EF%BC%881111-1111%EF%BC%89%E3%80%82"><span class="toc-number">5.5.0.0.3.</span> <span class="toc-text">3.尾数规格化：加减完成的尾数形式未必满足IEEE754对于尾数的要求，即保留23位，小数点在第一个1之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个1前面出现的0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%B0%BE%E6%95%B0%E7%9A%84%E8%88%8D%E5%85%A5%E5%A4%84%E7%90%86%EF%BC%9A"><span class="toc-number">5.5.0.0.4.</span> <span class="toc-text">4. 尾数的舍入处理：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD%EF%BC%9A-%E5%9C%A8%E6%B5%AE%E7%82%B9%E6%95%B0%E4%B8%AD%E6%98%AF%E4%BB%A5%E9%98%B6%E7%A0%81%E7%9A%84%E6%BA%A2%E5%87%BA%E4%B8%8E%E5%90%A6%E6%9D%A5%E4%BD%9C%E4%B8%BA%E8%AF%84%E5%88%A4%E6%A0%87%E5%87%86%E7%9A%84%E3%80%82%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%BA%A2%E5%87%BA%E5%88%86%E4%B8%BA%E4%B8%8A%E6%BA%A2%EF%BC%88%E6%8C%87%E6%95%B0%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E127%EF%BC%89%E5%92%8C%E4%B8%8B%E6%BA%A2%EF%BC%88%E6%8C%87%E6%95%B0%E5%B0%8F%E4%BA%8E%E7%AD%89%E4%BA%8E-126-%E3%80%82"><span class="toc-number">5.5.0.0.5.</span> <span class="toc-text">5. 溢出判断：  在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于127）和下溢（指数小于等于-126)。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-5-%E5%B0%8F%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">2.5 小结</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%8F%AF%E8%83%BD%E6%B2%A1%E4%BB%80%E4%B9%88%E5%B8%AE%E5%8A%A9%E5%B0%B1%E9%9A%8F%E4%BE%BF%E7%9C%8B%E7%9C%8B%E5%90%A7"><span class="toc-number">1.</span> <span class="toc-text"> csapp 第二章（可能没什么帮助，就随便看看吧）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#21%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8"><span class="toc-number">2.</span> <span class="toc-text"> 2.1 信息存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#211%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1.1 十六进制表示法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#212-%E5%AD%97"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.1.2 字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#213-%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.1.3 数据大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#214%E5%AF%BB%E5%9D%80%E5%92%8C%E5%AD%97%E8%8A%82%E9%A1%BA%E5%BA%8F"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.14 寻址和字节顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#215-%E8%A1%A8%E7%A4%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.5.</span> <span class="toc-text"> 2.15 表示字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#216-%E8%A1%A8%E7%A4%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">2.6.</span> <span class="toc-text"> 2.1.6 表示代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#217-%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0%E5%92%8C%E7%8E%AF"><span class="toc-number">2.7.</span> <span class="toc-text"> 2.1.7 布尔代数和环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#218-c%E4%B8%AD%E7%9A%84%E4%BD%8D%E7%BA%A7%E8%BF%90%E7%AE%97"><span class="toc-number">2.8.</span> <span class="toc-text"> 2.1.8  C 中的位级运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#219-c%E4%B8%AD%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-number">2.9.</span> <span class="toc-text"> 2.1.9   C 中的逻辑运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2110-c%E4%B8%AD%E7%9A%84%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">2.10.</span> <span class="toc-text"> 2.1.10  C 中的移位运算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#22-%E6%95%B4%E6%95%B0%E8%A1%A8%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text"> 2.2 整数表示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#221%E6%95%B4%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> 2.2.1 整型数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#222%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E7%BC%96%E7%A0%81"><span class="toc-number">3.2.</span> <span class="toc-text"> 2.2.2 无符号和二进制补码编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#223%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%92%8C%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.3.</span> <span class="toc-text"> 2.2.3 有符号数和无符号数之间的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#224-c%E4%B8%AD%E7%9A%84%E6%9C%89%E7%AC%A6%E5%8F%B7%E4%B8%8E%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="toc-number">3.4.</span> <span class="toc-text"> 2.2.4 C 中的有符号与无符号数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#225%E6%89%A9%E5%B1%95%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97%E7%9A%84%E4%BD%8D%E8%A1%A8%E7%A4%BA"><span class="toc-number">3.5.</span> <span class="toc-text"> 2.2.5 扩展一个数字的位表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#226-%E6%88%AA%E6%96%AD%E6%95%B0%E5%AD%97"><span class="toc-number">3.6.</span> <span class="toc-text"> 2.2.6 截断数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#227%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%92%8C%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E5%BB%BA%E8%AE%AE"><span class="toc-number">3.7.</span> <span class="toc-text"> 2.2.7 有符号数和无符号数的建议</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#23-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">4.</span> <span class="toc-text"> 2.3 整数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#231%E6%97%A0%E7%AC%A6%E5%8F%B7%E5%8A%A0%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text"> 2.3.1 无符号加法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#232%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E5%8A%A0%E6%B3%95"><span class="toc-number">4.2.</span> <span class="toc-text"> 2.3.2 二进制补码加法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#233-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E7%9A%84%E9%9D%9E"><span class="toc-number">4.3.</span> <span class="toc-text"> 2.3.3 二进制补码的非</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#234%E6%97%A0%E7%AC%A6%E5%8F%B7%E4%B9%98%E6%B3%95"><span class="toc-number">4.4.</span> <span class="toc-text"> 2.3.4 无符号乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#235%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81%E4%B9%98%E6%B3%95"><span class="toc-number">4.5.</span> <span class="toc-text"> 2.3.5 二进制补码乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#236%E4%B8%8E237-%E4%B9%98%E9%99%A42%E7%9A%84%E5%B9%82"><span class="toc-number">4.6.</span> <span class="toc-text"> 2.3.6 与 2.3.7  乘除 2 的幂</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#24%E6%B5%AE%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text"> 2.4 浮点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#241-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%B0%8F%E6%95%B0"><span class="toc-number">5.1.</span> <span class="toc-text"> 2.4.1  二进制小数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#242-ieee%E6%B5%AE%E7%82%B9%E8%A1%A8%E7%A4%BA"><span class="toc-number">5.2.</span> <span class="toc-text"> 2.4.2  IEEE 浮点表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#243-%E6%95%B0%E5%80%BC%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.3.</span> <span class="toc-text"> 2.4.3 数值示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#244%E8%88%8D%E5%85%A5"><span class="toc-number">5.4.</span> <span class="toc-text"> 2.4.4 舍入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#245-%E6%B5%AE%E7%82%B9%E8%BF%90%E7%AE%97"><span class="toc-number">5.5.</span> <span class="toc-text"> 2.4.5 浮点运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AF%B9%E9%98%B6%E6%89%80%E8%B0%93%E5%AF%B9%E9%98%B6%E5%B0%B1%E6%98%AF%E8%AE%A9%E4%B8%A4%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E9%98%B6%E6%95%B0%E7%9B%B8%E5%90%8C%E4%BB%A5%E4%BE%BF%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%87%8F-%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%96%B9%E5%BC%8F%E6%98%AF%E5%AF%B9%E8%BE%83%E5%B0%8F%E6%95%B0%E7%9A%84%E5%B0%BE%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%8F%B3%E7%A7%BB%E6%93%8D%E4%BD%9C-%E5%AF%B9%E9%98%B6%E7%9A%84%E5%8E%9F%E5%88%99%E6%98%AF%E5%90%91%E9%AB%98%E9%98%B6%E7%9C%8B%E9%BD%90"><span class="toc-number">5.5.0.0.1.</span> <span class="toc-text"> 1. 对阶：所谓对阶，就是让两个操作数阶数相同，以便进行加减。实现的方式是对较小数的尾数进行右移操作。对阶的原则是向高阶看齐。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%B0%BE%E6%95%B0%E5%8A%A0%E5%87%8F%E5%B0%86%E4%B8%A4%E4%B8%AA%E6%93%8D%E4%BD%9C%E6%95%B0%E7%9A%84%E5%B0%BE%E6%95%B0%E7%9B%B8%E5%8A%A0%E5%87%8F-%E5%9C%A8ieee754%E6%A0%87%E5%87%86%E4%B8%AD%E5%AF%B9%E4%BA%8E%E8%A7%84%E6%A0%BC%E5%8C%96%E6%95%B0%E6%9D%A5%E8%AF%B4%E5%9C%A8%E5%B0%8F%E6%95%B0%E7%82%B9%E5%89%8D%E6%9C%89%E4%B8%80%E4%BD%8D%E9%9A%90%E8%97%8F%E4%BD%8D1%E5%9C%A8%E5%8A%A0%E5%87%8F%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%9C%80%E8%A6%81%E6%8A%8A%E5%AE%83%E8%BF%98%E5%8E%9F%E5%88%B0%E5%B0%BE%E6%95%B0%E4%B8%AD-%E5%B0%BE%E6%95%B0%E5%8A%A0%E5%87%8F%E7%9A%84%E5%AE%9E%E8%B4%A8%E6%98%AF%E5%8E%9F%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F"><span class="toc-number">5.5.0.0.2.</span> <span class="toc-text"> 2. 尾数加减：将两个操作数的尾数相加减。在 IEEE754 标准中，对于规格化数来说在小数点前有一位隐藏位 1，在加减过程中需要把它还原到尾数中。尾数加减的实质是原码的加减，</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E5%B0%BE%E6%95%B0%E8%A7%84%E6%A0%BC%E5%8C%96%E5%8A%A0%E5%87%8F%E5%AE%8C%E6%88%90%E7%9A%84%E5%B0%BE%E6%95%B0%E5%BD%A2%E5%BC%8F%E6%9C%AA%E5%BF%85%E6%BB%A1%E8%B6%B3ieee754%E5%AF%B9%E4%BA%8E%E5%B0%BE%E6%95%B0%E7%9A%84%E8%A6%81%E6%B1%82%E5%8D%B3%E4%BF%9D%E7%95%9923%E4%BD%8D%E5%B0%8F%E6%95%B0%E7%82%B9%E5%9C%A8%E7%AC%AC%E4%B8%80%E4%B8%AA1%E4%B9%8B%E5%90%8E-%E9%9C%80%E8%A6%81%E5%AF%B9%E5%B0%BE%E6%95%B0%E8%BF%9B%E8%A1%8C%E5%B7%A6%E8%A7%84%E5%92%8C%E5%8F%B3%E8%A7%84%E4%B8%8B%E9%9D%A2%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%E5%B7%A6%E8%A7%84%E5%92%8C%E5%8F%B3%E8%A7%84-%E5%B7%A6%E8%A7%84%E5%B0%86%E5%B0%BE%E6%95%B0%E5%90%91%E5%B7%A6%E7%A7%BB%E7%94%A8%E4%BA%8E%E6%B8%85%E9%99%A4%E7%AC%AC%E4%B8%80%E4%B8%AA1%E5%89%8D%E9%9D%A2%E5%87%BA%E7%8E%B0%E7%9A%840-%E5%B7%A6%E8%A7%84%E4%BC%B4%E9%9A%8F%E7%9D%80%E9%98%B6%E7%A0%81%E5%87%8F%E5%B0%91%E5%9C%A8%E5%B7%A6%E8%A7%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%A6%81%E6%A3%80%E6%B5%8B%E9%98%B6%E7%A0%81%E6%98%AF%E5%90%A6%E5%8F%91%E7%94%9F%E4%B8%8B%E6%BA%A2%E5%8D%B3%E9%98%B6%E7%A0%81%E8%BE%BE%E5%88%B0%E6%9C%80%E5%B0%8F%E5%80%BC0000-0000-%E5%8F%B3%E8%A7%84%E5%B0%86%E5%B0%BE%E6%95%B0%E5%90%91%E5%8F%B3%E7%A7%BB%E7%94%A8%E4%BA%8E%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E5%90%8E%E5%87%BA%E7%8E%B0%E5%90%91%E9%AB%98%E4%BD%8D%E8%BF%9B%E4%BD%8D%E7%9A%84%E6%83%85%E5%86%B5-%E5%9B%A0%E4%B8%BA%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E6%9C%80%E5%A4%9A%E8%BF%9B%E4%B8%80%E4%BD%8D%E6%89%80%E4%BB%A5%E5%8F%B3%E8%A7%84%E6%9C%80%E5%A4%9A%E4%B8%80%E4%BD%8D-%E5%8F%B3%E8%A7%84%E4%BC%B4%E9%9A%8F%E7%9D%80%E9%98%B6%E7%A0%81%E7%9A%84%E5%A2%9E%E5%8A%A0%E5%9C%A8%E5%8F%B3%E8%A7%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%A6%81%E6%A3%80%E6%B5%8B%E9%98%B6%E7%A0%81%E6%98%AF%E5%90%A6%E5%8F%91%E7%94%9F%E4%B8%8A%E6%BA%A2%E5%8D%B3%E9%98%B6%E7%A0%81%E8%BE%BE%E5%88%B0%E6%9C%80%E5%A4%A7%E5%80%BC1111-1111"><span class="toc-number">5.5.0.0.3.</span> <span class="toc-text"> 3. 尾数规格化：加减完成的尾数形式未必满足 IEEE754 对于尾数的要求，即保留 23 位，小数点在第一个 1 之后。需要对尾数进行左规和右规，下面介绍一下左规和右规。左规：将尾数向左移，用于清除第一个 1 前面出现的 0。左规伴随着阶码减少，在左规过程中要检测阶码是否发生下溢，即阶码达到最小值（0000 0000）。右规：将尾数向右移，用于两数相加后出现向高位进位的情况。因为两数相加最多进一位，所以右规最多一位。右规伴随着阶码的增加，在右规过程中要检测阶码是否发生上溢，即阶码达到最大值（1111 1111）。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%B0%BE%E6%95%B0%E7%9A%84%E8%88%8D%E5%85%A5%E5%A4%84%E7%90%86"><span class="toc-number">5.5.0.0.4.</span> <span class="toc-text"> 4. 尾数的舍入处理：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#20200409003841315-%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD-%E5%9C%A8%E6%B5%AE%E7%82%B9%E6%95%B0%E4%B8%AD%E6%98%AF%E4%BB%A5%E9%98%B6%E7%A0%81%E7%9A%84%E6%BA%A2%E5%87%BA%E4%B8%8E%E5%90%A6%E6%9D%A5%E4%BD%9C%E4%B8%BA%E8%AF%84%E5%88%A4%E6%A0%87%E5%87%86%E7%9A%84-%E5%8D%95%E7%B2%BE%E5%BA%A6%E6%BA%A2%E5%87%BA%E5%88%86%E4%B8%BA%E4%B8%8A%E6%BA%A2%E6%8C%87%E6%95%B0%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E127%E5%92%8C%E4%B8%8B%E6%BA%A2%E6%8C%87%E6%95%B0%E5%B0%8F%E4%BA%8E%E7%AD%89%E4%BA%8E-126"><span class="toc-number">5.5.0.0.5.</span> <span class="toc-text"> 5. 溢出判断：  在浮点数中是以阶码的溢出与否来作为评判标准的。单精度溢出分为上溢（指数大于等于 127）和下溢（指数小于等于 - 126)。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#25-%E5%B0%8F%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text"> 2.5 小结</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -411,6 +462,25 @@ Yume Shoka = TCworker</title>
   <li class="item">
     
 <div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/10/12/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="csapp第二章">csapp第二章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
 </div>
 
@@ -431,15 +501,6 @@ Yume Shoka = TCworker</title>
   <li class="item">
     
 <div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/10/12/pagetags/" title="pagetags">pagetags</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
 </div>
 
@@ -452,17 +513,7 @@ Yume Shoka = TCworker</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2022/10/12/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
-</div>
-
-    <span><a href="/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="csapp第二章">csapp第二章</a></span>
+    <span><a href="/2022/10/12/pagetags/" title="pagetags">pagetags</a></span>
   </li>
 
   </ul>
