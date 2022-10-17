@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>TCworker • Posts by &#34;技术知识分享&#34; category</title>
+    <link href="http://example.com" />
+    <updated>2022-10-17T09:59:00.000Z</updated>
+    <category term="csapp" />
+    <category term="闲暇" />
+    <category term="Linux" />
+    <category term="图床 Typroa" />
+    <entry>
+        <id>http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</id>
+        <title>图床的概念及配设</title>
+        <link rel="alternate" href="http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/"/>
+        <content type="html">&lt;hr&gt;
+&lt;h1 id=&#34;图床的概念及-u配设u&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图床的概念及-u配设u&#34;&gt;#&lt;/a&gt; 图床的概念及 &lt;u&gt;配设&lt;/u&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;1什么是图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1什么是图床&#34;&gt;#&lt;/a&gt; 1. 什么是图床&lt;/h2&gt;
+&lt;p&gt;图床，是互联网中存储图片的服务器。&lt;/p&gt;
+&lt;p&gt;我们分享图片到网上，而其它网友可以访问你的图片（也就是看得见你的图片），实际上是图床提供空间存储了你的图片。总之，图床就是专门用来存放图片，同时允许你把图片对外连接的网上空间 。&lt;/p&gt;
+&lt;h2 id=&#34;2如何使用图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2如何使用图床&#34;&gt;#&lt;/a&gt; 2. 如何使用图床&lt;/h2&gt;
+&lt;p&gt;（这里使用 GitHub，创建一个仓库来作为自己的图床，同时设置获取你 GitHub 账号的一个 Token ）&lt;/p&gt;
+&lt;p&gt;具体教程如图（图片资源来自网络，如有侵权请反馈）&lt;/p&gt;
+&lt;h3 id=&#34;agithub创建仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#agithub创建仓库&#34;&gt;#&lt;/a&gt; A.GitHub 创建仓库&lt;/h3&gt;
+&lt;p&gt;首先进入 github 网站（网上可以不费力的找到，）注册登录后，在主页如图&lt;/p&gt;
+&lt;h4 id=&#34;1进入仓库创建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1进入仓库创建&#34;&gt;#&lt;/a&gt; 1.(进入仓库创建)&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171632093.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162213_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2&#34;&gt;#&lt;/a&gt; 2.&lt;/h4&gt;
+&lt;p&gt;1（仓库名，建议输入 imges，也可以是其他。但&lt;u&gt;不要含有中文和其它非字母字符&lt;/u&gt;）&lt;/p&gt;
+&lt;p&gt;2.（勾选 public）&lt;/p&gt;
+&lt;p&gt;3.（勾选）&lt;/p&gt;
+&lt;p&gt;4.（点击）&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171633572.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162432_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;3-完成后退到主页面点击右上角图标再点击setttings&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-完成后退到主页面点击右上角图标再点击setttings&#34;&gt;#&lt;/a&gt; 3.。。。（完成后退到主页面，&lt;strong&gt;点击右上角图标，再点击 setttings&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171639882.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162656_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;4在左下点击developer-settings&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4在左下点击developer-settings&#34;&gt;#&lt;/a&gt; 4.（在左下，点击 Developer settings）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171641515.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162746_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;5点击左边的钥匙图标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5点击左边的钥匙图标&#34;&gt;#&lt;/a&gt; 5.（点击左边的）&lt;strong&gt;钥匙图标&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171643996.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162818_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;6再点击如图中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6再点击如图中&#34;&gt;#&lt;/a&gt; 6.（再点击）（如图中）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171644582.jpeg&#34; alt=&#34;网页捕获_17-10-2022_162910_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;7&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7&#34;&gt;#&lt;/a&gt; 7.&lt;/h4&gt;
+&lt;p&gt;1（输入 &lt;u&gt;picturebed&lt;/u&gt;，或者其它名字，同样，不要使用中文和非字母字符）&lt;/p&gt;
+&lt;p&gt;2（有效日期  ，看个人的情况。长期使用的话：&lt;strong&gt;点击下三角，选最后一个，即无限期&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;3.（&lt;strong&gt;勾选 repo，其它尽量不勾选&lt;/strong&gt;，因为我也没勾过）&lt;/p&gt;
+&lt;p&gt;4。（点击）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171644248.jpeg&#34; alt=&#34;网页捕获_17-10-2022_163052_github.com&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;8生成后复制你的token一定要复制保存他只会显示这一次后续查找不到&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8生成后复制你的token一定要复制保存他只会显示这一次后续查找不到&#34;&gt;#&lt;/a&gt; 8.&lt;strong&gt; 生成后复制你的 token，一定要复制保存，他只会显示这一次，后续查找不到&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171652463.png&#34; alt=&#34;20200808103016720&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这样就基本完成了图床，token 之后会用到，请保存好。&lt;/p&gt;
+&lt;h3 id=&#34;bpicgo-配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bpicgo-配置&#34;&gt;#&lt;/a&gt; B.picgo 配置&lt;/h3&gt;
+&lt;h4 id=&#34;1请先下载-picgo链接如下releases-molunerfinnpicgo-githubcom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1请先下载-picgo链接如下releases-molunerfinnpicgo-githubcom&#34;&gt;#&lt;/a&gt; 1. 请先下载  PicGo, 链接如下&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt; Releases・Molunerfinn/PicGo (github.com)&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;（版本要看个人的机型，不过建议下载最新版本。安装十分简单，所以     &lt;u&gt;我可不会指导你安装&lt;/u&gt;）&lt;strong&gt;（– _–）@&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2安装好后打开在主界面点击1图床设置再点击2github进入设置-ca1ce17053217fbef132aff10928278e&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2安装好后打开在主界面点击1图床设置再点击2github进入设置-ca1ce17053217fbef132aff10928278e&#34;&gt;#&lt;/a&gt; 2. 安装好后打开，在主界面点击 1.&lt;strong&gt; 图床设置&lt;/strong&gt;，再点击 2.&lt;strong&gt;GitHub&lt;/strong&gt;，进入设置。&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171714238.png&#34; alt=&#34;ca1ce17053217fbef132aff10928278e&#34;&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;3如下进行设置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3如下进行设置&#34;&gt;#&lt;/a&gt; 3.&lt;strong&gt; 如下进行设置&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;注意 1.（仓库名不能有空格和非法字符）2.（分支填 main）3.（token 是之前那个让你们复制或记下来的。如果你没有记，那你就寄了）// 其实网上有办法，不过我不在这里赘述 //&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;（在你的 GitHub 仓库里建一个文件夹，该文件夹用于存放你上传的图片）// 其实你不建也没什么关系，只不过会有点乱 //&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（这个自定义域名起一个加速的作用，你也可以不填）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171717510.png&#34; alt=&#34;20210926142149463&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;4点击picdo设置然后&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4点击picdo设置然后&#34;&gt;#&lt;/a&gt; 4. 点击 picdo 设置，然后：&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171727640.png&#34; alt=&#34;20200808103101714&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;5这样就基本完成了当然还有插件可供安装不过我就不做插件的介绍了-主要是我没用过这些插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5这样就基本完成了当然还有插件可供安装不过我就不做插件的介绍了-主要是我没用过这些插件&#34;&gt;#&lt;/a&gt; 5. 这样就基本完成了，当然还有插件可供安装，不过我就不做插件的介绍了。// 主要是我没用过这些插件 //&lt;/h4&gt;
+&lt;h3 id=&#34;ctypora的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ctypora的配置&#34;&gt;#&lt;/a&gt; C.Typora 的配置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下载安装 Typora&lt;/li&gt;
+&lt;li&gt;点击&lt;u&gt;左上角&lt;/u&gt;&lt;strong&gt;文件&lt;/strong&gt;中偏好设置&lt;/li&gt;
+&lt;li&gt;再点击&lt;strong&gt;图像&lt;/strong&gt;进行 图片的设置&lt;/li&gt;
+&lt;li&gt;再点击 验&lt;strong&gt;证图片上传项&lt;/strong&gt;（如图显示就可以了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（1. 有必要的话，可以勾选 “&lt;u&gt;优先使用相对路径&lt;/u&gt;” 2. 选择&lt;strong&gt; PicGo（app）&lt;/strong&gt;，记得要找到你&lt;strong&gt;自己设备中 PicGo 应用程序&lt;/strong&gt;的位置）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171735371.png&#34; alt=&#34;20200808103109194&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171738435.png&#34; alt=&#34;20200808103115780&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;d希望你不会遇上明明picgo显示图片上传成功但是github仓库里却无法显示图片这种情况-反正我遇上了&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#d希望你不会遇上明明picgo显示图片上传成功但是github仓库里却无法显示图片这种情况-反正我遇上了&#34;&gt;#&lt;/a&gt; D：希望你不会遇上明明 PicGo 显示图片上传成功，但是，GitHub 仓库里却无法显示图片这种情况 // 反正我遇上了 //&lt;/h3&gt;
+&lt;p&gt;这时侯，你大概率仍然无法正常使用图床。至于解决办法。。。。。。&lt;/p&gt;
+&lt;p&gt;我推荐几个博主的文章，大家自己考虑。&lt;/p&gt;
+&lt;p&gt;1.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JpbGFsXzAvYXJ0aWNsZS9kZXRhaWxzLzEyNjA3ODAxMz9vcHNfcmVxdWVzdF9taXNjPSZhbXA7cmVxdWVzdF9pZD0mYW1wO2Jpel9pZD0xMDImYW1wO3V0bV90ZXJtPVR5cG9yYStQaWNHbytHaXRIdWIlRTQlQjglOEElRTQlQkMlQTAlRTYlODglOTAlRTUlOEElOUYlRTQlQkQlODYlRTQlQjglOEQlRTYlOTglQkUlRTclQTQlQkEmYW1wO3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19zZWFyY2hfcmVzdWx0Lm5vbmUtdGFzay1ibG9nLTJ+YWxsfnNvYmFpZHV3ZWJ+ZGVmYXVsdC0wLTEyNjA3ODAxMy5ub25lY2FzZSZhbXA7c3BtPTEwMTguMjIyNi4zMDAxLjQxODc=&#34;&gt;Typora 图片上传成功后无法显示（Typora+Github + Picgo）_OMUQUK 的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ5ODc0MzAwL2FydGljbGUvZGV0YWlscy8xMjA0MTIwNzM/b3BzX3JlcXVlc3RfbWlzYz0mYW1wO3JlcXVlc3RfaWQ9JmFtcDtiaXpfaWQ9MTAyJmFtcDt1dG1fdGVybT1UeXBvcmErUGljR28rR2l0SHViJUU0JUI4JThBJUU0JUJDJUEwJUU2JTg4JTkwJUU1JThBJTlGJUU0JUJEJTg2JUU0JUI4JThEJUU2JTk4JUJFJUU3JUE0JUJBJmFtcDt1dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfc2VhcmNoX3Jlc3VsdC5ub25lLXRhc2stYmxvZy0yfmFsbH5zb2JhaWR1d2VifmRlZmF1bHQtMS0xMjA0MTIwNzMubm9uZWNhc2UmYW1wO3NwbT0xMDE4LjIyMjYuMzAwMS40MTg3&#34;&gt;typora 配置图床（Typora + Picgo + github）+ 发生的错误问题_唯ě⒈が的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjAyNTM3MS9hcnRpY2xlL2RldGFpbHMvMTExMTA1MjY2P29wc19yZXF1ZXN0X21pc2M9JmFtcDtyZXF1ZXN0X2lkPSZhbXA7Yml6X2lkPTEwMiZhbXA7dXRtX3Rlcm09cGljZ28lRTYlOTglQkUlRTclQTQlQkElRTQlQjglOEElRTQlQkMlQTAlRTYlODglOTAlRTUlOEElOUYlRTQlQkQlODYlRTYlOTglQUYmYW1wO3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19zZWFyY2hfcmVzdWx0Lm5vbmUtdGFzay1ibG9nLTJ+YWxsfnNvYmFpZHV3ZWJ+ZGVmYXVsdC0xLTExMTEwNTI2Ni5ub25lY2FzZSZhbXA7c3BtPTEwMTguMjIyNi4zMDAxLjQxODc=&#34;&gt;Typora+PicGo+GitHub 实现图片上传及可能碰到的问题_- 雾里 - 的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;（本文部分素材来源互联网）&lt;/p&gt;
+</content>
+        <category term="图床 Typroa" />
+        <updated>2022-10-17T09:59:00.000Z</updated>
+    </entry>
+</feed>
