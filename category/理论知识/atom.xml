@@ -8,9 +8,9 @@
     <category term="闲暇" />
     <category term="Linux" />
     <entry>
-        <id>http://example.com/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/</id>
+        <id>http://example.com/2022/10/12/csapp%E7%AC%ACll%E7%AB%A0/</id>
         <title>csapp第二章</title>
-        <link rel="alternate" href="http://example.com/2022/10/12/csapp%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+        <link rel="alternate" href="http://example.com/2022/10/12/csapp%E7%AC%ACll%E7%AB%A0/"/>
         <content type="html">&lt;h1 id=&#34;csapp第二章可能没什么帮助就随便看看吧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#csapp第二章可能没什么帮助就随便看看吧&#34;&gt;#&lt;/a&gt; csapp 第二章（可能没什么帮助，就随便看看吧）&lt;/h1&gt;
 &lt;p&gt;（现代计算机以二进制存储信息。相较于十进制，它能更好的适配计算机，能够更可靠的进行信息的表示、存储传输；用不同的位组合来表示元素；三种重要的数字编码：&lt;u&gt;无符号编码&lt;/u&gt;，&lt;u&gt;二进制补码&lt;/u&gt;，&lt;u&gt;浮点数编码&lt;/u&gt;；）&lt;/p&gt;
 &lt;h1 id=&#34;21信息存储&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21信息存储&#34;&gt;#&lt;/a&gt; 2.1 信息存储&lt;/h1&gt;
