@@ -1,25 +1,19 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>TCworker • Posts by &#34;技术知识分享&#34; category</title>
-        <link>http://example.com</link>
-        <description>time to work</description>
-        <language>zh-CN</language>
-        <pubDate>Mon, 17 Oct 2022 17:59:00 +0800</pubDate>
-        <lastBuildDate>Mon, 17 Oct 2022 17:59:00 +0800</lastBuildDate>
-        <category>csapp</category>
-        <category>闲暇</category>
-        <category>Linux</category>
-        <category>图床</category>
-        <category>Typroa</category>
-        <item>
-            <guid isPermalink="true">http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</guid>
-            <title>图床的概念及配设</title>
-            <link>http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</link>
-            <category>图床</category>
-            <category>Typroa</category>
-            <pubDate>Mon, 17 Oct 2022 17:59:00 +0800</pubDate>
-            <description><![CDATA[ &lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>TCworker • Posts by &#34;typroa&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2022-10-17T09:59:00.000Z</updated>
+    <category term="csapp" />
+    <category term="闲暇" />
+    <category term="Linux" />
+    <category term="图床" />
+    <category term="Typroa" />
+    <entry>
+        <id>http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</id>
+        <title>图床的概念及配设</title>
+        <link rel="alternate" href="http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/"/>
+        <content type="html">&lt;hr&gt;
 &lt;h1 id=&#34;图床的概念及-u配设u&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图床的概念及-u配设u&#34;&gt;#&lt;/a&gt; 图床的概念及 &lt;u&gt;配设&lt;/u&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;1什么是图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1什么是图床&#34;&gt;#&lt;/a&gt; 1. 什么是图床&lt;/h2&gt;
 &lt;p&gt;图床，是互联网中存储图片的服务器。&lt;/p&gt;
@@ -88,7 +82,9 @@
 &lt;p&gt;2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ5ODc0MzAwL2FydGljbGUvZGV0YWlscy8xMjA0MTIwNzM/b3BzX3JlcXVlc3RfbWlzYz0mYW1wO3JlcXVlc3RfaWQ9JmFtcDtiaXpfaWQ9MTAyJmFtcDt1dG1fdGVybT1UeXBvcmErUGljR28rR2l0SHViJUU0JUI4JThBJUU0JUJDJUEwJUU2JTg4JTkwJUU1JThBJTlGJUU0JUJEJTg2JUU0JUI4JThEJUU2JTk4JUJFJUU3JUE0JUJBJmFtcDt1dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfc2VhcmNoX3Jlc3VsdC5ub25lLXRhc2stYmxvZy0yfmFsbH5zb2JhaWR1d2VifmRlZmF1bHQtMS0xMjA0MTIwNzMubm9uZWNhc2UmYW1wO3NwbT0xMDE4LjIyMjYuMzAwMS40MTg3&#34;&gt;typora 配置图床（Typora + Picgo + github）+ 发生的错误问题_唯ě⒈が的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;3.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjAyNTM3MS9hcnRpY2xlL2RldGFpbHMvMTExMTA1MjY2P29wc19yZXF1ZXN0X21pc2M9JmFtcDtyZXF1ZXN0X2lkPSZhbXA7Yml6X2lkPTEwMiZhbXA7dXRtX3Rlcm09cGljZ28lRTYlOTglQkUlRTclQTQlQkElRTQlQjglOEElRTQlQkMlQTAlRTYlODglOTAlRTUlOEElOUYlRTQlQkQlODYlRTYlOTglQUYmYW1wO3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19zZWFyY2hfcmVzdWx0Lm5vbmUtdGFzay1ibG9nLTJ+YWxsfnNvYmFpZHV3ZWJ+ZGVmYXVsdC0xLTExMTEwNTI2Ni5ub25lY2FzZSZhbXA7c3BtPTEwMTguMjIyNi4zMDAxLjQxODc=&#34;&gt;Typora+PicGo+GitHub 实现图片上传及可能碰到的问题_- 雾里 - 的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;（本文部分素材来源互联网）&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="图床" />
+        <category term="Typroa" />
+        <updated>2022-10-17T09:59:00.000Z</updated>
+    </entry>
+</feed>

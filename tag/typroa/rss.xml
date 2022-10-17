@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>TCworker • Posts by &#34;图床/typroa&#34; tag</title>
+        <title>TCworker • Posts by &#34;typroa&#34; tag</title>
         <link>http://example.com</link>
         <description>time to work</description>
         <language>zh-CN</language>
@@ -10,12 +10,14 @@
         <category>csapp</category>
         <category>闲暇</category>
         <category>Linux</category>
-        <category>图床/Typroa</category>
+        <category>图床</category>
+        <category>Typroa</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</guid>
             <title>图床的概念及配设</title>
             <link>http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</link>
-            <category>图床/Typroa</category>
+            <category>图床</category>
+            <category>Typroa</category>
             <pubDate>Mon, 17 Oct 2022 17:59:00 +0800</pubDate>
             <description><![CDATA[ &lt;hr&gt;
 &lt;h1 id=&#34;图床的概念及-u配设u&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图床的概念及-u配设u&#34;&gt;#&lt;/a&gt; 图床的概念及 &lt;u&gt;配设&lt;/u&gt;&lt;/h1&gt;
