@@ -61,11 +61,11 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;（这个自定义域名起一个加速的作用，你也可以不填）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210171717510.png&#34; alt=&#34;20210926142149463&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5C%E9%99%88%E6%9E%97%E6%B5%B7%5CDesktop%5Cblog%5Csource_posts%5C%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE.assets%5C202210182331532.png&#34; alt=&#34;20210926142149463&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;4点击picdo设置然后&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4点击picdo设置然后&#34;&gt;#&lt;/a&gt; 4. 点击 picdo 设置，然后：&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210182331532.png&#34; alt=&#34;20210926142149463&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210182357700.png&#34; alt=&#34;20200808103101714&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;5这样就基本完成了当然还有插件可供安装不过我就不做插件的介绍了-主要是我没用过这些插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5这样就基本完成了当然还有插件可供安装不过我就不做插件的介绍了-主要是我没用过这些插件&#34;&gt;#&lt;/a&gt; 5. 这样就基本完成了，当然还有插件可供安装，不过我就不做插件的介绍了。// 主要是我没用过这些插件 //&lt;/h4&gt;
 &lt;h3 id=&#34;ctypora的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ctypora的配置&#34;&gt;#&lt;/a&gt; C.Typora 的配置&lt;/h3&gt;
 &lt;ul&gt;
@@ -75,7 +75,7 @@
 &lt;li&gt;再点击 验&lt;strong&gt;证图片上传项&lt;/strong&gt;（如图显示就可以了）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;（1. 有必要的话，可以勾选 “&lt;u&gt;优先使用相对路径&lt;/u&gt;” 2. 选择&lt;strong&gt; PicGo（app）&lt;/strong&gt;，记得要找到你&lt;strong&gt;自己设备中 PicGo 应用程序&lt;/strong&gt;的位置）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE.assets/202210182332333.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/images/img/202210182356103.png&#34; alt&gt;&lt;/p&gt;
 &lt;h3 id=&#34;d希望你不会遇上明明picgo显示图片上传成功但是github仓库里却无法显示图片这种情况-反正我遇上了&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#d希望你不会遇上明明picgo显示图片上传成功但是github仓库里却无法显示图片这种情况-反正我遇上了&#34;&gt;#&lt;/a&gt; D：希望你不会遇上明明 PicGo 显示图片上传成功，但是，GitHub 仓库里却无法显示图片这种情况 // 反正我遇上了 //&lt;/h3&gt;
 &lt;p&gt;这时侯，你大概率仍然无法正常使用图床。至于解决办法。。。。。。&lt;/p&gt;
 &lt;p&gt;我推荐几个博主的文章，大家自己考虑。&lt;/p&gt;
