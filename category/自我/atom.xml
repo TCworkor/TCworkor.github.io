@@ -29,4 +29,13 @@
         <category term="闲暇" />
         <updated>2022-10-12T06:21:02.000Z</updated>
     </entry>
+    <entry>
+        <id>http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2%20-%201%20-%20%E5%89%AF%E6%9C%AC/</id>
+        <title>我的第一次博客</title>
+        <link rel="alternate" href="http://example.com/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2%20-%201%20-%20%E5%89%AF%E6%9C%AC/"/>
+        <content type="html">&lt;p&gt;我叫 chenli&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210191020942.jpeg&#34; alt=&#34;d46c762e2d76c6a81de95ec4a2b3da28&#34;&gt;nhai，是 TCcompany 的员工&lt;/p&gt;
+</content>
+        <category term="闲暇" />
+        <updated>2022-10-12T06:21:02.000Z</updated>
+    </entry>
 </feed>
