@@ -5,13 +5,21 @@
         <link>http://example.com</link>
         <description>time to work</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 17 Oct 2022 17:59:00 +0800</pubDate>
-        <lastBuildDate>Mon, 17 Oct 2022 17:59:00 +0800</lastBuildDate>
+        <pubDate>Wed, 19 Oct 2022 08:07:28 +0800</pubDate>
+        <lastBuildDate>Wed, 19 Oct 2022 08:07:28 +0800</lastBuildDate>
         <category>csapp</category>
         <category>闲暇</category>
         <category>Linux</category>
         <category>图床</category>
         <category>Typroa</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/19/%E2%80%9Cyuiy%E2%80%9D/</guid>
+            <title>“yuiy”</title>
+            <link>http://example.com/2022/10/19/%E2%80%9Cyuiy%E2%80%9D/</link>
+            <pubDate>Wed, 19 Oct 2022 08:07:28 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;./%E2%80%9Cyuiy%E2%80%9D.assets/h-1666138206565-2.jpeg&#34; alt=&#34;h&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</guid>
             <title>图床的概念及配设</title>
