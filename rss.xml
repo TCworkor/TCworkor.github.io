@@ -5,21 +5,13 @@
         <link>http://example.com</link>
         <description>time to work</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 19 Oct 2022 08:07:28 +0800</pubDate>
-        <lastBuildDate>Wed, 19 Oct 2022 08:07:28 +0800</lastBuildDate>
+        <pubDate>Mon, 17 Oct 2022 17:59:00 +0800</pubDate>
+        <lastBuildDate>Mon, 17 Oct 2022 17:59:00 +0800</lastBuildDate>
         <category>csapp</category>
         <category>闲暇</category>
         <category>Linux</category>
         <category>图床</category>
         <category>Typroa</category>
-        <item>
-            <guid isPermalink="true">http://example.com/2022/10/19/%E2%80%9Cyuiy%E2%80%9D/</guid>
-            <title>“yuiy”</title>
-            <link>http://example.com/2022/10/19/%E2%80%9Cyuiy%E2%80%9D/</link>
-            <pubDate>Wed, 19 Oct 2022 08:07:28 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190853922.jpeg&#34; alt=&#34;h&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</guid>
             <title>图床的概念及配设</title>
@@ -38,17 +30,17 @@
 &lt;h3 id=&#34;agithub创建仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#agithub创建仓库&#34;&gt;#&lt;/a&gt; A.GitHub 创建仓库&lt;/h3&gt;
 &lt;p&gt;首先进入 github 网站（网上可以不费力的找到，）注册登录后，在主页如图&lt;/p&gt;
 &lt;h4 id=&#34;1进入仓库创建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1进入仓库创建&#34;&gt;#&lt;/a&gt; 1.(进入仓库创建)&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190855266.png&#34; alt=&#34;image-20221018232046409&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190909103.png&#34; alt=&#34;image-20221018232046409&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2&#34;&gt;#&lt;/a&gt; 2.&lt;/h4&gt;
 &lt;p&gt;1（仓库名，建议输入 imges，也可以是其他。但&lt;u&gt;不要含有中文和其它非字母字符&lt;/u&gt;）&lt;/p&gt;
 &lt;p&gt;2.（勾选 public）&lt;/p&gt;
 &lt;p&gt;3.（勾选）&lt;/p&gt;
 &lt;p&gt;4.（点击）&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190857940.png&#34; alt=&#34;image-20221018232127422&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190909481.png&#34; alt=&#34;image-20221018232127422&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;3-完成后退到主页面点击右上角图标再点击setttings&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-完成后退到主页面点击右上角图标再点击setttings&#34;&gt;#&lt;/a&gt; 3.。。。（完成后退到主页面，&lt;strong&gt;点击右上角图标，再点击 setttings&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190857553.png&#34; alt=&#34;image-20221018232328045&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190910825.png&#34; alt=&#34;image-20221018232328045&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;4在左下点击developer-settings&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4在左下点击developer-settings&#34;&gt;#&lt;/a&gt; 4.（在左下，点击 Developer settings）&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190858197.png&#34; alt=&#34;image-20221018232406820&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190911156.png&#34; alt=&#34;image-20221018232406820&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;5点击左边的钥匙图标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5点击左边的钥匙图标&#34;&gt;#&lt;/a&gt; 5.（点击左边的）&lt;strong&gt;钥匙图标&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190858005.png&#34; alt=&#34;image-20221018232458656&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;6再点击如图中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6再点击如图中&#34;&gt;#&lt;/a&gt; 6.（再点击）（如图中）&lt;/h4&gt;
@@ -98,6 +90,14 @@
 &lt;p&gt;2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ5ODc0MzAwL2FydGljbGUvZGV0YWlscy8xMjA0MTIwNzM/b3BzX3JlcXVlc3RfbWlzYz0mYW1wO3JlcXVlc3RfaWQ9JmFtcDtiaXpfaWQ9MTAyJmFtcDt1dG1fdGVybT1UeXBvcmErUGljR28rR2l0SHViJUU0JUI4JThBJUU0JUJDJUEwJUU2JTg4JTkwJUU1JThBJTlGJUU0JUJEJTg2JUU0JUI4JThEJUU2JTk4JUJFJUU3JUE0JUJBJmFtcDt1dG1fbWVkaXVtPWRpc3RyaWJ1dGUucGNfc2VhcmNoX3Jlc3VsdC5ub25lLXRhc2stYmxvZy0yfmFsbH5zb2JhaWR1d2VifmRlZmF1bHQtMS0xMjA0MTIwNzMubm9uZWNhc2UmYW1wO3NwbT0xMDE4LjIyMjYuMzAwMS40MTg3&#34;&gt;typora 配置图床（Typora + Picgo + github）+ 发生的错误问题_唯ě⒈が的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;3.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjAyNTM3MS9hcnRpY2xlL2RldGFpbHMvMTExMTA1MjY2P29wc19yZXF1ZXN0X21pc2M9JmFtcDtyZXF1ZXN0X2lkPSZhbXA7Yml6X2lkPTEwMiZhbXA7dXRtX3Rlcm09cGljZ28lRTYlOTglQkUlRTclQTQlQkElRTQlQjglOEElRTQlQkMlQTAlRTYlODglOTAlRTUlOEElOUYlRTQlQkQlODYlRTYlOTglQUYmYW1wO3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19zZWFyY2hfcmVzdWx0Lm5vbmUtdGFzay1ibG9nLTJ+YWxsfnNvYmFpZHV3ZWJ+ZGVmYXVsdC0xLTExMTEwNTI2Ni5ub25lY2FzZSZhbXA7c3BtPTEwMTguMjIyNi4zMDAxLjQxODc=&#34;&gt;Typora+PicGo+GitHub 实现图片上传及可能碰到的问题_- 雾里 - 的博客 - CSDN 博客&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;（本文部分素材来源互联网）&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/16/%E6%9C%AA%E5%91%BD%E5%90%8D/</guid>
+            <title></title>
+            <link>http://example.com/2022/10/16/%E6%9C%AA%E5%91%BD%E5%90%8D/</link>
+            <pubDate>Sun, 16 Oct 2022 21:11:03 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://cdn.jsdelivr.net/gh/TCworkor/TCworkor.github.io/img/202210190918868.jpg&#34; alt=&#34;千万不要打开IMG_20221017_170054&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
