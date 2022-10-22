@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>TCworker • Posts by &#34;hexo&#34; tag</title>
+        <link>http://example.com</link>
+        <description>time to work</description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 22 Oct 2022 19:31:02 +0800</pubDate>
+        <lastBuildDate>Sat, 22 Oct 2022 19:31:02 +0800</lastBuildDate>
+        <category>csapp</category>
+        <category>闲暇</category>
+        <category>Linux</category>
+        <category>图床</category>
+        <category>Typroa</category>
+        <category>blog</category>
+        <category>hexo</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/22/%E5%A6%82%E4%BD%95%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+            <title>如何为博客添加评论系统</title>
+            <link>http://example.com/2022/10/22/%E5%A6%82%E4%BD%95%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+            <category>blog</category>
+            <category>hexo</category>
+            <pubDate>Sat, 22 Oct 2022 19:31:02 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;如何为博客添加评论系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何为博客添加评论系统&#34;&gt;#&lt;/a&gt; 如何为博客添加评论系统&lt;/h1&gt;
+&lt;p&gt;你是否还在为 hexo 博客场景单一而烦恼吗！&lt;/p&gt;
+&lt;p&gt;你是否还在为 hexo 博客的外观平平无奇而忧虑吗！&lt;/p&gt;
+&lt;p&gt;你是否还在为 hexo 博客的评论难以开启而绝望吗！&lt;/p&gt;
+&lt;p&gt;如果你刚刚搭好博客模板，如果你还没有开始配置，如果你还没有确定的博客主题。&lt;/p&gt;
+&lt;p&gt;那么，我强烈安利 github 上的 hexo 主题： &lt;strong&gt;shoka&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;。。。。。。。。&lt;/p&gt;
+&lt;p&gt;（抱歉啰嗦过头了）&lt;/p&gt;
+&lt;h2 id=&#34;1主题选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1主题选择&#34;&gt;#&lt;/a&gt; 1. 主题选择&lt;/h2&gt;
+&lt;p&gt;一般来说，hexo 搭建的博客都要装载主题，而某些主题因为其自身的配置原因，是不支持评论系统的，所以在选择时候要避开一些不支持评论的主题。什么？你不想装载主题。这可以是可以，不过因为主题一般都会自带评论系统的一些插件，可以省下很多的麻烦。如我的主题（&lt;strong&gt;shoka&lt;/strong&gt;），就很便于添加评论系统。&lt;/p&gt;
+&lt;h2 id=&#34;2网站准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2网站准备&#34;&gt;#&lt;/a&gt; 2. 网站准备&lt;/h2&gt;
+&lt;p&gt;这里我是默认大家都装载了（&lt;strong&gt;shoka&lt;/strong&gt;）主题，因为操作比较简单。至于该主题的安装，就烦请大家去 github 官网自己解决了。&lt;strong&gt;!+_+!&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGVhbmNsb3VkLmNuLw==&#34;&gt; LeanCloud&lt;/span&gt; 官网，完成&lt;u&gt;注册和登录&lt;/u&gt;。（可能还会有一些实名认证和邮箱认证）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221936318.jpeg&#34; alt=&#34;网页捕获_22-10-2022_193344_www.leancloud.cn&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 点击左上角 &lt;code&gt;创建&lt;/code&gt; 应用&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221940040.png&#34; alt=&#34;5c270bbffc674e1c9f7ff67d0b26fa76&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. 完善信息（名称随意，计价方案选开发版，描述随意）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221942465.png&#34; alt=&#34;f656e7d7376d423e9983243292791560&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4.&lt;strong&gt; 点击&lt;/strong&gt;创建好的应用的设置（&lt;u&gt;齿轮状&lt;/u&gt;），选择应用凭证并复制 &lt;code&gt;appid&lt;/code&gt;  和 &lt;code&gt;appkey&lt;/code&gt; ，后续会使用。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221945436.png&#34; alt=&#34;622ee0cb1f4946dc91f71b326342fa94&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221945214.png&#34; alt=&#34;91072ec614aa4d349b6963d1ccd2f8ce&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5. 点击  &lt;code&gt;存储 -&amp;gt; 结构化数据&lt;/code&gt; ，选择  &lt;code&gt;创建 Class&lt;/code&gt; ，名称  &lt;code&gt;Comment&lt;/code&gt; ，其他保持默认，以后就可在此 Class 内查看；；；；点击  &lt;code&gt;存储 -&amp;gt; 结构化数据&lt;/code&gt; ，选择 &lt;code&gt;创建 Class&lt;/code&gt; ，名称  &lt;code&gt;Counter&lt;/code&gt; ，其他保持默认，以后就可在此 Class 内查看。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221950153.png&#34; alt=&#34;b0fd3016cdaf422e8ea4763a014cd461&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6. 点击 &lt;code&gt;设置&lt;/code&gt; ，点击 &lt;code&gt;安全中心&lt;/code&gt; ，之后如图设置。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210221957329.jpeg&#34; alt=&#34;网页捕获_22-10-2022_194824_console.leancloud.cn&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3本地文件配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3本地文件配置&#34;&gt;#&lt;/a&gt; 3. 本地文件配置&lt;/h2&gt;
+&lt;p&gt;1. 在 hexo 的文件目录下，使用&lt;u&gt;&lt;strong&gt;查找&lt;/strong&gt;&lt;/u&gt;，查找文件 &lt;code&gt;_config.yml&lt;/code&gt; 。因为这个文件有时候不好找。（图中我的 &lt;code&gt;blog&lt;/code&gt;  目录就是 &lt;code&gt;hexo&lt;/code&gt;  文件目录）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210222011389.png&#34; alt=&#34;QQ截图20221022201108&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 完成查找后，来到 hexo 博客&lt;strong&gt; shoka&lt;/strong&gt; 主题的 &lt;code&gt;_config.yml&lt;/code&gt;  配置文件中，&lt;strong&gt;修改文件内容&lt;/strong&gt;（查找后可能有多个符合要求的文件，&lt;strong&gt;每一个都要修改&lt;/strong&gt;，用记事本打开）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202210222018582.png&#34; alt=&#34;QQ截图20221022201817&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;appid&lt;/code&gt;  和 &lt;code&gt;appkey&lt;/code&gt;  是之前我们复制的，粘贴的时候记得 &lt;code&gt;：&lt;/code&gt; 后有一个空格。&lt;/p&gt;
+&lt;p&gt;最后， &lt;code&gt;hexo c&lt;/code&gt; ， &lt;code&gt;hexo g&lt;/code&gt; ， &lt;code&gt;hexo d&lt;/code&gt; 。重新配设博客后，评论系统就可以使用了。（怎样是不是非常简单）&lt;/p&gt;
+&lt;p&gt;//// 部分图片源自网络。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
