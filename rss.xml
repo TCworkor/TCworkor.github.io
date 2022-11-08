@@ -5,8 +5,8 @@
         <link>http://example.com</link>
         <description>time to work</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 30 Oct 2022 16:33:19 +0800</pubDate>
-        <lastBuildDate>Sun, 30 Oct 2022 16:33:19 +0800</lastBuildDate>
+        <pubDate>Tue, 08 Nov 2022 13:21:32 +0800</pubDate>
+        <lastBuildDate>Tue, 08 Nov 2022 13:21:32 +0800</lastBuildDate>
         <category>csapp</category>
         <category>闲暇</category>
         <category>Linux</category>
@@ -15,6 +15,30 @@
         <category>blog</category>
         <category>hexo</category>
         <category>python</category>
+        <category>pwn</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/</guid>
+            <title>pwn入门题：pwn?pwn!</title>
+            <link>http://example.com/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/</link>
+            <category>pwn</category>
+            <pubDate>Tue, 08 Nov 2022 13:21:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;pwn入门题pwnpwn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pwn入门题pwnpwn&#34;&gt;#&lt;/a&gt; pwn 入门题：pwn?pwn!&lt;/h1&gt;
+&lt;p&gt;得到了一个和 pwn 有关的文件： &lt;code&gt;pwn4fun&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;u&gt;Windows&lt;/u&gt;直接打开后是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211081146578.png&#34; alt=&#34;QQ截图20221108114545&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实也是意料之中。&lt;/p&gt;
+&lt;p&gt;我们把该文件甩到 &lt;code&gt;ida&lt;/code&gt;  中去，发现该文件是一个 ELF 文件：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211081150587.png&#34; alt=&#34;QQ截图20221108114951&#34;&gt;&lt;/p&gt;
+&lt;p&gt;接着打开 Linux，在终端执行该文件，得到以下结果&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211081153040.png&#34; alt=&#34;QQ截图20221108115307&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这必然是人类无法完成的事，所以我们考虑&lt;strong&gt;编写脚本&lt;/strong&gt;来代替我们执行工作，这里使用 python 的脚本 (注意要先下载一些必要的工具如 pwntools，pwngdb 等)，编好后的脚本如下 (新人的脚本请见谅)：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211081203964.png&#34; alt=&#34;QQ截图20221108120341&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之后在终端运行该脚本，得到：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211081205839.png&#34; alt=&#34;QQ截图20221108120528&#34;&gt;&lt;/p&gt;
+&lt;p&gt;便大功告成了。&lt;/p&gt;
+&lt;p&gt;&amp;lt;&amp;lt;经管走了很多的弯路，尽管有很多都不知道，但这样的旅途，这样的风景，才更有意义，才更加动人&amp;gt;&amp;gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/30/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3python%E8%AF%AD%E8%A8%80[%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B]/</guid>
             <title>深入理解python语言[基本数据类型]</title>

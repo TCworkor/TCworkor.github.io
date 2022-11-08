@@ -12,6 +12,7 @@
     <category term="blog" />
     <category term="hexo" />
     <category term="python" />
+    <category term="pwn" />
     <entry>
         <id>http://example.com/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/</id>
         <title>图床的概念及配设</title>
