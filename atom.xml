@@ -3,7 +3,7 @@
     <id>http://example.com</id>
     <title>TCworker</title>
     <link href="http://example.com" />
-    <updated>2022-11-08T05:21:32.000Z</updated>
+    <updated>2022-11-24T15:51:02.000Z</updated>
     <category term="csapp" />
     <category term="闲暇" />
     <category term="Linux" />
@@ -13,6 +13,59 @@
     <category term="hexo" />
     <category term="python" />
     <category term="pwn" />
+    <category term="指针" />
+    <category term="C语言" />
+    <entry>
+        <id>http://example.com/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/</id>
+        <title>C语言指针(1)</title>
+        <link rel="alternate" href="http://example.com/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/"/>
+        <content type="html">&lt;h2 id=&#34;一指针简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一指针简介&#34;&gt;#&lt;/a&gt; 一。指针简介&lt;/h2&gt;
+&lt;p&gt;指针是  &lt;code&gt;C&lt;/code&gt;  语言的灵魂，它不仅仅是 C 语言中的一个重要概念及其特点，也是 C 语言比较困难的部分。指针也就是 &lt;code&gt;内存地址&lt;/code&gt; ，指针变量是用来&lt;u&gt;存放&lt;strong&gt;内存地址&lt;/strong&gt;的变量&lt;/u&gt;，不同类型的指针变量所占用的存储单元长度是&lt;strong&gt;相同的&lt;/strong&gt; (毕竟只是一个地址)，而存放数据的变量因数据的类型不同，所占用的存储空间长度也&lt;strong&gt;不同&lt;/strong&gt;。【其实就像酒店的房间，房间的 &lt;mark&gt;&lt;strong&gt;门牌号&lt;/strong&gt;&lt;/mark&gt; (指针 \ &lt;u&gt;内存地址&lt;/u&gt;) 可以都是三位数 如 803 .  012，但是 &lt;mark&gt;&lt;strong&gt;房间类型&lt;/strong&gt;&lt;/mark&gt; (不同数据类型的&lt;u&gt;储存空间长度&lt;/u&gt;) 可以随着住户的需求而改变，像 单人间 ， 双人间 ，杂物间？】&lt;/p&gt;
+&lt;p&gt;合理的使用指针可以提高效率。&lt;/p&gt;
+&lt;p&gt;合理的使用指针可以提高灵活度。&lt;/p&gt;
+&lt;p&gt;不合理的使用指针就会大 (吉) 寄大 (利) 历；&lt;/p&gt;
+&lt;p&gt;因为指针是一把&lt;mark&gt;双刃剑&lt;/mark&gt;，如果对指针不能正确理解和灵活有效的应用，利用指针编写的程序也很容易发生各式各样的错误，同时程序的可读性也会大打折扣。所以指针的使用，不是 &lt;strong&gt;吉&lt;/strong&gt;，就是 &lt;strong&gt;寄&lt;/strong&gt;。至于是吉还是寄，就看诸位的功底了。}&lt;/p&gt;
+&lt;h3 id=&#34;1内存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1内存&#34;&gt;#&lt;/a&gt; 1. 内存&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;C&lt;/code&gt;  语言所有的变量都存放在内存中，每个人都有它的归宿， 而各种变量如 int ,char … ，它们的归宿就是内存，总之嘛，&lt;strong&gt;内存作为容器用来存放变量&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;2内存地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2内存地址&#34;&gt;#&lt;/a&gt; 2. 内存地址&lt;/h3&gt;
+&lt;p&gt;内存地址就好比一个人的身份证，每个人的身份证都是唯一的，&lt;strong&gt;内存地址也是唯一的&lt;/strong&gt;，可以通过唯一的内存地址，找到唯一的内存数据。&lt;/p&gt;
+&lt;h3 id=&#34;3指针声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3指针声明&#34;&gt;#&lt;/a&gt; 3. 指针声明&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;指针&lt;/code&gt; 也是  &lt;code&gt;C&lt;/code&gt;  语言中变量的一种，其值为一个 &lt;strong&gt;变量&lt;/strong&gt; 的地址，即内存位置的直接地址。指针变量声明的一般形式为：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232327103.jpeg&#34; alt=&#34;网页捕获_23-11-2022_231934_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：请不要忘记在指针类型和变量名中间有一个  &lt;code&gt;*&lt;/code&gt;  号哦，没有这个  &lt;code&gt;*&lt;/code&gt;  号的话，只是定义了一个普通变量，这也是普通变量声明和指针声明的区别之一；&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232331683.jpeg&#34; alt=&#34;网页捕获_23-11-2022_23208_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;二指针类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二指针类型&#34;&gt;#&lt;/a&gt; 二。指针类型&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;指针很灵活，它可以指向任意类型的数据。 &lt;code&gt;指针&lt;/code&gt; 的类型说明了它所指向  &lt;u&gt;地址空间 &lt;/u&gt; 的内存&lt;/strong&gt;，以下是有效的指针声明：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232333259.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232038_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三声明并初始化一个指针&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三声明并初始化一个指针&#34;&gt;#&lt;/a&gt; 三。声明并初始化一个指针&lt;/h2&gt;
+&lt;h3 id=&#34;1声明指针并直接初始化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1声明指针并直接初始化&#34;&gt;#&lt;/a&gt; 1. 声明指针并直接初始化&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232334098.jpeg&#34; alt=&#34;网页捕获_23-11-2022_23212_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2先声明指针再初始化最好不要这样-_-&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2先声明指针再初始化最好不要这样-_-&#34;&gt;#&lt;/a&gt; 2. 先声明指针再初始化 (最好不要这样 - _ -)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;在 &lt;code&gt;C&lt;/code&gt;  语言中，定义局部变量时如果未初始化，那么它的值将会是随机的；而全局变量 、静态变量初始值为  &lt;code&gt;0&lt;/code&gt;  ；所以如果你不想你的程序有炸掉的风险的话，请  &lt;mark&gt;声明指针并直接初始化&lt;/mark&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;四查看指针地址和指针的值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四查看指针地址和指针的值&#34;&gt;#&lt;/a&gt; 四。查看指针地址和指针的值&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;指针&lt;/code&gt; 的占位符则是用  &lt;code&gt;%p&lt;/code&gt;  或者  &lt;code&gt;%x&lt;/code&gt;  (x 并不是 x) 表示，具体使用参考下面例子：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232341430.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232258_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在如上例子中：声明了一个整形变量  &lt;code&gt;iValue&lt;/code&gt;  ，并使用指针  &lt;code&gt;pValue&lt;/code&gt;  执行整形变量  &lt;code&gt;iValue&lt;/code&gt;  ，根据输出的信息可以得到结论：&lt;strong&gt;&lt;u&gt;两者的内存地址都一样&lt;/u&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于整形变量  &lt;code&gt;iValue&lt;/code&gt;  指针变量  &lt;code&gt;pValue&lt;/code&gt;  内存地址一样，整形变量  &lt;code&gt;iValue&lt;/code&gt;  的值发生变化后指针  &lt;code&gt;pValue&lt;/code&gt;  也会跟着一起变化 (所以好像会互相影响呢)，指针  &lt;code&gt;pValue&lt;/code&gt;  的值发生变化后整形变量  &lt;code&gt;iValue&lt;/code&gt;  的值也会跟着一起变化，两者本来就是 ==&lt;u&gt;同一个&lt;/u&gt;==，&lt;/strong&gt; 就好比既可以通过&lt;mark&gt;名字&lt;/mark&gt;来找到你，也可以通过&lt;mark&gt;身份证号码&lt;/mark&gt;来找到你。&lt;/p&gt;
+&lt;h2 id=&#34;五null-指针-空指针&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五null-指针-空指针&#34;&gt;#&lt;/a&gt; 五.NULL 指针 – 空指针&lt;/h2&gt;
+&lt;p&gt;在变量声明的时候，如果没有确切的地址可以赋值，为指针变量赋一个  &lt;code&gt;NULL&lt;/code&gt;  值，赋为  &lt;code&gt;NULL&lt;/code&gt;  值的指针被称为 == &lt;code&gt;空指针&lt;/code&gt;  ==。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;NULL&lt;/code&gt;  指针是一个定义在标准库中的值为零的常量&lt;/strong&gt;。请看下面的程序：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232348261.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232357_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在大多数的操作系统上，程序是不允许用户访问&lt;u&gt;地址为 0&lt;/u&gt; 的内存，&lt;u&gt;因为该内存是操作系统保留的&lt;/u&gt;。然而，内存地址 0 有&lt;mark&gt;特别重要的意义&lt;/mark&gt;，它表明该指针&lt;u&gt;不指向一个可访问的内存位置&lt;/u&gt;。但按照惯例，如果指针包含 &lt;strong&gt;空值&lt;/strong&gt;（零值），&lt;u&gt;则假定它不指向任何东西&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如需检查一个空指针，您可以使用 &lt;code&gt;if&lt;/code&gt;  语句，如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232352132.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232423_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;六重点总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六重点总结&#34;&gt;#&lt;/a&gt; 六。重点总结&lt;/h2&gt;
+&lt;p&gt;1. 指针作为一个变量，拥有自己的地址，占位符使用 &lt;code&gt;%p&lt;/code&gt;  或者 &lt;code&gt; %x&lt;/code&gt; ；&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232354862.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232446_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 取指针的值需要在指针变量前面加上  &lt;code&gt;*&lt;/code&gt;  ，否则是取指针的地址；&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232359851.jpeg&#34; alt=&#34;网页捕获_23-11-2022_232510_www.jianshu.com&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;` 部分图片来自网络&lt;/p&gt;
+</content>
+        <category term="指针" />
+        <category term="C语言" />
+        <updated>2022-11-24T15:51:02.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/</id>
         <title>pwn入门题：pwn?pwn!</title>

@@ -1,0 +1,535 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="TCworker" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="TCworker" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="TCworker" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="指针,C语言" />
+
+
+<link rel="canonical" href="http://example.com/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/">
+
+
+
+  <title>
+C语言指针(1) - 理论知识 |
+Yume Shoka = TCworker</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">C语言指针(1)
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-24 23:51:02">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-24T23:51:02+08:00">2022-11-24</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" itemprop="item" rel="index" title="分类于 理论知识"><span itemprop="name">理论知识</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Me">
+    <meta itemprop="description" content=", time to work">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="TCworker">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="一指针简介"><a class="markdownIt-Anchor" href="#一指针简介">#</a> 一。指针简介</h2>
+<p>指针是  <code>C</code>  语言的灵魂，它不仅仅是 C 语言中的一个重要概念及其特点，也是 C 语言比较困难的部分。指针也就是 <code>内存地址</code> ，指针变量是用来<u>存放<strong>内存地址</strong>的变量</u>，不同类型的指针变量所占用的存储单元长度是<strong>相同的</strong> (毕竟只是一个地址)，而存放数据的变量因数据的类型不同，所占用的存储空间长度也<strong>不同</strong>。【其实就像酒店的房间，房间的 <mark><strong>门牌号</strong></mark> (指针 \ <u>内存地址</u>) 可以都是三位数 如 803 .  012，但是 <mark><strong>房间类型</strong></mark> (不同数据类型的<u>储存空间长度</u>) 可以随着住户的需求而改变，像 单人间 ， 双人间 ，杂物间？】</p>
+<p>合理的使用指针可以提高效率。</p>
+<p>合理的使用指针可以提高灵活度。</p>
+<p>不合理的使用指针就会大 (吉) 寄大 (利) 历；</p>
+<p>因为指针是一把<mark>双刃剑</mark>，如果对指针不能正确理解和灵活有效的应用，利用指针编写的程序也很容易发生各式各样的错误，同时程序的可读性也会大打折扣。所以指针的使用，不是 <strong>吉</strong>，就是 <strong>寄</strong>。至于是吉还是寄，就看诸位的功底了。}</p>
+<h3 id="1内存"><a class="markdownIt-Anchor" href="#1内存">#</a> 1. 内存</h3>
+<p><code>C</code>  语言所有的变量都存放在内存中，每个人都有它的归宿， 而各种变量如 int ,char … ，它们的归宿就是内存，总之嘛，<strong>内存作为容器用来存放变量</strong>。</p>
+<h3 id="2内存地址"><a class="markdownIt-Anchor" href="#2内存地址">#</a> 2. 内存地址</h3>
+<p>内存地址就好比一个人的身份证，每个人的身份证都是唯一的，<strong>内存地址也是唯一的</strong>，可以通过唯一的内存地址，找到唯一的内存数据。</p>
+<h3 id="3指针声明"><a class="markdownIt-Anchor" href="#3指针声明">#</a> 3. 指针声明</h3>
+<p><code>指针</code> 也是  <code>C</code>  语言中变量的一种，其值为一个 <strong>变量</strong> 的地址，即内存位置的直接地址。指针变量声明的一般形式为：</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232327103.jpeg" alt="网页捕获_23-11-2022_231934_www.jianshu.com"></p>
+<p><strong>注意：请不要忘记在指针类型和变量名中间有一个  <code>*</code>  号哦，没有这个  <code>*</code>  号的话，只是定义了一个普通变量，这也是普通变量声明和指针声明的区别之一；</strong></p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232331683.jpeg" alt="网页捕获_23-11-2022_23208_www.jianshu.com"></p>
+<h2 id="二指针类型"><a class="markdownIt-Anchor" href="#二指针类型">#</a> 二。指针类型</h2>
+<p><strong>指针很灵活，它可以指向任意类型的数据。 <code>指针</code> 的类型说明了它所指向  <u>地址空间 </u> 的内存</strong>，以下是有效的指针声明：</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232333259.jpeg" alt="网页捕获_23-11-2022_232038_www.jianshu.com"></p>
+<h2 id="三声明并初始化一个指针"><a class="markdownIt-Anchor" href="#三声明并初始化一个指针">#</a> 三。声明并初始化一个指针</h2>
+<h3 id="1声明指针并直接初始化"><a class="markdownIt-Anchor" href="#1声明指针并直接初始化">#</a> 1. 声明指针并直接初始化</h3>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232334098.jpeg" alt="网页捕获_23-11-2022_23212_www.jianshu.com"></p>
+<h3 id="2先声明指针再初始化最好不要这样-_-"><a class="markdownIt-Anchor" href="#2先声明指针再初始化最好不要这样-_-">#</a> 2. 先声明指针再初始化 (最好不要这样 - _ -)</h3>
+<p><strong>在 <code>C</code>  语言中，定义局部变量时如果未初始化，那么它的值将会是随机的；而全局变量 、静态变量初始值为  <code>0</code>  ；所以如果你不想你的程序有炸掉的风险的话，请  <mark>声明指针并直接初始化</mark></strong></p>
+<h2 id="四查看指针地址和指针的值"><a class="markdownIt-Anchor" href="#四查看指针地址和指针的值">#</a> 四。查看指针地址和指针的值</h2>
+<p><code>指针</code> 的占位符则是用  <code>%p</code>  或者  <code>%x</code>  (x 并不是 x) 表示，具体使用参考下面例子：</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232341430.jpeg" alt="网页捕获_23-11-2022_232258_www.jianshu.com"></p>
+<p>在如上例子中：声明了一个整形变量  <code>iValue</code>  ，并使用指针  <code>pValue</code>  执行整形变量  <code>iValue</code>  ，根据输出的信息可以得到结论：<strong><u>两者的内存地址都一样</u></strong>。</p>
+<p><strong>由于整形变量  <code>iValue</code>  指针变量  <code>pValue</code>  内存地址一样，整形变量  <code>iValue</code>  的值发生变化后指针  <code>pValue</code>  也会跟着一起变化 (所以好像会互相影响呢)，指针  <code>pValue</code>  的值发生变化后整形变量  <code>iValue</code>  的值也会跟着一起变化，两者本来就是 ==<u>同一个</u>==，</strong> 就好比既可以通过<mark>名字</mark>来找到你，也可以通过<mark>身份证号码</mark>来找到你。</p>
+<h2 id="五null-指针-空指针"><a class="markdownIt-Anchor" href="#五null-指针-空指针">#</a> 五.NULL 指针 – 空指针</h2>
+<p>在变量声明的时候，如果没有确切的地址可以赋值，为指针变量赋一个  <code>NULL</code>  值，赋为  <code>NULL</code>  值的指针被称为 == <code>空指针</code>  ==。</p>
+<p><strong> <code>NULL</code>  指针是一个定义在标准库中的值为零的常量</strong>。请看下面的程序：</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232348261.jpeg" alt="网页捕获_23-11-2022_232357_www.jianshu.com"></p>
+<p>在大多数的操作系统上，程序是不允许用户访问<u>地址为 0</u> 的内存，<u>因为该内存是操作系统保留的</u>。然而，内存地址 0 有<mark>特别重要的意义</mark>，它表明该指针<u>不指向一个可访问的内存位置</u>。但按照惯例，如果指针包含 <strong>空值</strong>（零值），<u>则假定它不指向任何东西</u>。</p>
+<p>如需检查一个空指针，您可以使用 <code>if</code>  语句，如下所示：</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232352132.jpeg" alt="网页捕获_23-11-2022_232423_www.jianshu.com"></p>
+<h2 id="六重点总结"><a class="markdownIt-Anchor" href="#六重点总结">#</a> 六。重点总结</h2>
+<p>1. 指针作为一个变量，拥有自己的地址，占位符使用 <code>%p</code>  或者 <code> %x</code> ；</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232354862.jpeg" alt="网页捕获_23-11-2022_232446_www.jianshu.com"></p>
+<p>2. 取指针的值需要在指针变量前面加上  <code>*</code>  ，否则是取指针的地址；</p>
+<p><img data-src="https://tcwokor.oss-cn-chengdu.aliyuncs.com/img/202211232359851.jpeg" alt="网页捕获_23-11-2022_232510_www.jianshu.com"></p>
+<hr>
+<p>` 部分图片来自网络</p>
+
+      <div class="tags">
+          <a href="/tags/%E6%8C%87%E9%92%88/" rel="tag"><i class="ic i-tag"></i> 指针</a>
+          <a href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"><i class="ic i-tag"></i> C语言</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-11-24 00:06:32" itemprop="dateModified" datetime="2022-11-24T00:06:32+08:00">2022-11-24</time>
+  </span>
+  <span id="2022/11/24/C语言指针(1)/" class="item leancloud_visitors" data-flag-title="C语言指针(1)" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Me 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Me 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Me 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Me <i class="ic i-at"><em>@</em></i>TCworker
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/" title="C语言指针(1)">http://example.com/2022/11/24/C语言指针(1)/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgi503lj20zk0m8hdt.jpg" title="pwn入门题：pwn?pwn!">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 解题实践</span>
+  <h3>pwn入门题：pwn?pwn!</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%8C%87%E9%92%88%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 一。指针简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E5%86%85%E5%AD%98"><span class="toc-number">1.1.</span> <span class="toc-text"> 1. 内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80"><span class="toc-number">1.2.</span> <span class="toc-text"> 2. 内存地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E6%8C%87%E9%92%88%E5%A3%B0%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text"> 3. 指针声明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text"> 二。指针类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%A3%B0%E6%98%8E%E5%B9%B6%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E6%8C%87%E9%92%88"><span class="toc-number">3.</span> <span class="toc-text"> 三。声明并初始化一个指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E5%A3%B0%E6%98%8E%E6%8C%87%E9%92%88%E5%B9%B6%E7%9B%B4%E6%8E%A5%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">3.1.</span> <span class="toc-text"> 1. 声明指针并直接初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E5%85%88%E5%A3%B0%E6%98%8E%E6%8C%87%E9%92%88%E5%86%8D%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%80%E5%A5%BD%E4%B8%8D%E8%A6%81%E8%BF%99%E6%A0%B7-_-"><span class="toc-number">3.2.</span> <span class="toc-text"> 2. 先声明指针再初始化 (最好不要这样 - _ -)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E6%9F%A5%E7%9C%8B%E6%8C%87%E9%92%88%E5%9C%B0%E5%9D%80%E5%92%8C%E6%8C%87%E9%92%88%E7%9A%84%E5%80%BC"><span class="toc-number">4.</span> <span class="toc-text"> 四。查看指针地址和指针的值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94null-%E6%8C%87%E9%92%88-%E7%A9%BA%E6%8C%87%E9%92%88"><span class="toc-number">5.</span> <span class="toc-text"> 五.NULL 指针 – 空指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E9%87%8D%E7%82%B9%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text"> 六。重点总结</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="bookmark" title="开始使用Linux操作系统">开始使用Linux操作系统</a></li><li><a href="/2022/10/12/csapp%E7%AC%ACll%E7%AB%A0/" rel="bookmark" title="csapp第二章">csapp第二章</a></li><li><a href="/2022/10/30/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3python%E8%AF%AD%E8%A8%80%5B%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%5D/" rel="bookmark" title="深入理解python语言[基本数据类型]">深入理解python语言[基本数据类型]</a></li><li class="active"><a href="/2022/11/24/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88(1)/" rel="bookmark" title="C语言指针(1)">C语言指针(1)</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Me"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Me</p>
+  <div class="description" itemprop="description">time to work</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">11</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/10/12/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/30/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3python%E8%AF%AD%E8%A8%80%5B%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%5D/" title="深入理解python语言[基本数据类型]">深入理解python语言[基本数据类型]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
+</div>
+
+    <span><a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2/" title="我的第一次博客">我的第一次博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%A7%A3%E9%A2%98%E5%AE%9E%E8%B7%B5/" title="分类于 解题实践">解题实践</a>
+</div>
+
+    <span><a href="/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/" title="pwn入门题：pwn?pwn!">pwn入门题：pwn?pwn!</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" title="分类于 技术知识分享">技术知识分享</a>
+</div>
+
+    <span><a href="/2022/10/22/%E5%A6%82%E4%BD%95%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" title="如何为博客添加评论系统">如何为博客添加评论系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/12/csapp%E7%AC%ACll%E7%AB%A0/" title="csapp第二章">csapp第二章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%87%AA%E6%88%91/" title="分类于 自我">自我</a>
+</div>
+
+    <span><a href="/2022/10/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%9A%E5%AE%A2%20-%201/" title="我的第一次博客">我的第一次博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" title="分类于 技术知识分享">技术知识分享</a>
+</div>
+
+    <span><a href="/2022/10/17/%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E9%85%8D%E8%AE%BE/" title="图床的概念及配设">图床的概念及配设</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" title="分类于 理论知识">理论知识</a>
+</div>
+
+    <span><a href="/2022/10/12/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="开始使用Linux操作系统">开始使用Linux操作系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/10/12/pagetags/" title="pagetags">pagetags</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Me @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/11/24/C语言指针(1)/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

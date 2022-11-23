@@ -13,6 +13,8 @@
     <category term="hexo" />
     <category term="python" />
     <category term="pwn" />
+    <category term="指针" />
+    <category term="C语言" />
     <entry>
         <id>http://example.com/2022/11/08/pwn%E5%85%A5%E9%97%A8%E9%A2%98%EF%BC%9Apwn%EF%BC%9Fpwn%EF%BC%81/</id>
         <title>pwn入门题：pwn?pwn!</title>
